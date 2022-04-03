@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -36,11 +37,9 @@ function App() {
         <Navbar />
         <ScrollToTop />
 
-        {/* <Home />
-        <About />
-        <Projects /> */}
 
-        <Routes>
+
+        {/* <Routes>
           <Route path="/" element={<Home />} />
 
           <Route path="/about" element={<About />} />
@@ -48,7 +47,21 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        </Routes> */}
+
+
+        {/* one page code */}
+
+        <div id="home">
+          <Home />
+        </div>
+        <div id="project">
+          <Projects />
+        </div>
+        <div id="about">
+          <About />
+
+        </div>
 
         <Footer />
 
