@@ -58,7 +58,7 @@ function App() {
         <div id="project">
           <Projects />
         </div>
-        <div id="about">
+        <div id="aboutme">
           <About />
 
         </div>
