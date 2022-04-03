@@ -318,6 +318,8 @@ button:focus {
 
   .home-section {
     background-image: none;
+    margin-bottom: -70px;
+    margin-top: -50px;
   }
 
   .Typewriter__cursor {
@@ -336,17 +338,30 @@ button:focus {
   padding-top: 9em !important;
 }
 
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
-  }
-}
 
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 20px !important;
+}
+
+@media (max-width: 767px) {
+  .myAvtar {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+
+  .home-about-section {
+    position: relative;
+    padding-bottom: 70px !important;
+    padding-top: 0px !important;
+    margin-top: 0px;
+  }
+
+  .secondName {
+    display: none;
+  }
+
 }
 
 .home-about-description {
