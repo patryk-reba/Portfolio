@@ -23,7 +23,7 @@ function About() {
           Formal <strong className="purple">Education </strong>
         </h1>
         <a href="http://pwr.edu.pl/en/">
-          <img src={pwrLogo} style={{ width: "40%" }} />
+          <img className="pwrImg" src={pwrLogo} />
         </a>
         <h1 className="project-heading">
           Programming <strong className="purple">Education </strong>

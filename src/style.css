@@ -345,6 +345,10 @@ button:focus {
   padding-top: 20px !important;
 }
 
+.pwrImg {
+  width: 40%
+}
+
 @media (max-width: 767px) {
   .myAvtar {
     padding-top: 2em !important;
@@ -356,6 +360,10 @@ button:focus {
     padding-bottom: 70px !important;
     padding-top: 0px !important;
     margin-top: 0px;
+  }
+
+  .pwrImg {
+    width: 75% !important
   }
 
   .secondName {
