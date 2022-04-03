@@ -38,7 +38,7 @@ function Home() {
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
-              /> */}
+              />d */}
               <Tilt>
                 <img src={myImg} className="img-fluid" alt="avatar" style={{ borderRadius: "100%", maxHeight: "450px", }} />
               </Tilt>
