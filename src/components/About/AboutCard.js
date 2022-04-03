@@ -27,6 +27,9 @@ function AboutCard() {
               🎸 Guitar playing.
             </li>
             <li className="about-activity">
+              🚀 Science.
+            </li>
+            <li className="about-activity">
               <ImPointRight /> Rock climbing.
             </li>
             <li className="about-activity">

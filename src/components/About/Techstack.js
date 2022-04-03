@@ -1,27 +1,20 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
-  DiPython,
+
   DiGit,
 } from "react-icons/di";
 import {
-  SiPytorch,
-  SiFirebase,
-  SiNextdotjs,
   SiSolidity,
   SiAdobephotoshop,
   SiAdobelightroom,
   SiCss3
-
 } from "react-icons/si";
 import { FaHardHat } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
-
 import { BsWordpress } from "react-icons/bs";
 
 function Techstack() {
@@ -65,6 +58,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <FaHardHat />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <BsWordpress />

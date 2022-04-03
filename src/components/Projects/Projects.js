@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.jpeg";
-import editor from "../../Assets/Projects/codeEditor.png";
+
+import instEco from "../../Assets/Projects/instEco.png";
 import tenzies from "../../Assets/Projects/tenzies.png";
+import podroze from "../../Assets/Projects/podroze.png";
 import climbium from "../../Assets/Projects/climbium.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+
 
 function Projects() {
   return (
@@ -23,11 +23,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+
               imgPath={tenzies}
               isBlog={false}
               title="Tenzies Game"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              link="https://famous-cuchufli-ebbd41.netlify.app/"
+              link="https://tenzies-game-reba.netlify.app/"
             />
           </Col>
 
@@ -43,7 +44,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={instEco}
               isBlog={false}
               title="INST-ECO"
               description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
@@ -53,7 +54,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={podroze}
               isBlog={false}
               title="My travels"
               description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
