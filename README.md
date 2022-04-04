@@ -1,10 +1,10 @@
 <h2 align="center">
-  Portfolio Website - v2.0<br/>
+  Patryk Reba Portfolio
   <a href="http://patrykreba.com/" target="_blank">patrykreba.com</a>
 </h2>
-<div align="center">
+<!-- <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+</div> -->
 
 <br/>
 
