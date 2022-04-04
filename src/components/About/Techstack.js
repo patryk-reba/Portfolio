@@ -11,7 +11,8 @@ import {
   SiSolidity,
   SiAdobephotoshop,
   SiAdobelightroom,
-  SiCss3
+  SiCss3,
+  SiNetlify
 } from "react-icons/si";
 import { FaHardHat } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -66,6 +67,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <BsWordpress />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiNetlify />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiAdobelightroom />
