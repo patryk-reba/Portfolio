@@ -9,6 +9,7 @@ import pwrLogo from "../../Assets/pwr-logo.jpg";
 import parkourImg from "../../Assets/parkour.png";
 import Toolstack from "./Toolstack";
 import Projects from "../Projects/Projects";
+import Education from "./Education";
 
 function About() {
   return (
@@ -22,12 +23,16 @@ function About() {
         <h1 className="project-heading">
           Formal <strong className="purple">Education </strong>
         </h1>
-        <a href="http://pwr.edu.pl/en/">
-          <img className="pwrImg" src={pwrLogo} />
-        </a>
+        <div className="pwrContainer">
+          <a href="http://pwr.edu.pl/en/">
+            <img className="pwrImg" src={pwrLogo} />
+          </a>
+
+        </div>
         <h1 className="project-heading">
           Programming <strong className="purple">Education </strong>
         </h1>
+        <Education />
         {/* <Projects /> */}
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -43,6 +48,7 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
+
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
@@ -51,6 +57,7 @@ function About() {
             {/* <img src={parkourImg} alt="about" className="img-fluid" style={{ borderRadius: "20%" }} /> */}
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
+
         </Row>
 
         {/* <h1 className="project-heading">

@@ -273,7 +273,7 @@ button:focus {
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-top: -10px !important;
 }
 
 .home-content {
@@ -346,7 +346,19 @@ button:focus {
 }
 
 .pwrImg {
-  width: 40%
+  width: 40%;
+  font-size: 4.5em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+
 }
 
 @media (max-width: 767px) {
@@ -463,7 +475,7 @@ button:focus {
   justify-content: center;
 
   transition: 300ms;
-  margin-top: 80px;
+  margin-top: 10vh;
   margin-bottom: 40px;
 
 }
@@ -678,6 +690,8 @@ button:focus {
   text-align: left !important;
   padding-left: 1px !important;
 }
+
+
 
 @media (max-width: 767px) {
   .about-img {
