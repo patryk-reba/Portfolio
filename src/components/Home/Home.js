@@ -50,7 +50,7 @@ function Home() {
             <HashLink to="#home2" >
               <div className="arrowContainer">
 
-                <BsFillArrowDownCircleFill style={{}} className="arrow" />
+                <BsFillArrowDownCircleFill size={40} className="arrow" />
               </div>
             </HashLink>
 

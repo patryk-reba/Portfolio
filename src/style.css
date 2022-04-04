@@ -319,7 +319,7 @@ button:focus {
   .home-section {
     background-image: none;
     margin-bottom: -70px;
-    margin-top: -75px;
+    margin-top: -95px;
   }
 
   .Typewriter__cursor {
@@ -449,10 +449,7 @@ button:focus {
 
 .arrow {
   color: #801f95;
-
-  transform: scale(2.5);
-  margin-top: 80px;
-
+  opacity: .7
 }
 
 .arrow:hover {
@@ -461,18 +458,20 @@ button:focus {
 }
 
 .arrowContainer {
-  /* border: solid 2px yellow; */
+  border: solid 2px yellow;
   text-align: center;
   justify-content: center;
-  height: 12vh;
+
   transition: 300ms;
+  margin-top: 80px;
+  margin-bottom: 40px;
 
 }
 
 .arrowContainer:hover {
   cursor: pointer;
   transition: 300ms;
-  transform: scale(1.1);
+  transform: scale(1.07);
 
 }
 
