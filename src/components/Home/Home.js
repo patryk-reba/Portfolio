@@ -6,6 +6,8 @@ import Tilt from 'react-parallax-tilt';
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { BsFillArrowDownCircleFill } from "react-icons/bs"
+import { HashLink } from 'react-router-hash-link';
 
 function Home() {
   return (
@@ -44,6 +46,14 @@ function Home() {
                 <img src={myImg} className="img-fluid" alt="avatar" style={{ borderRadius: "100%", maxHeight: "450px", }} />
               </Tilt>
             </Col>
+
+            <HashLink to="#home2" >
+              <div className="arrowContainer">
+
+                <BsFillArrowDownCircleFill style={{}} className="arrow" />
+              </div>
+            </HashLink>
+
 
           </Row>
         </Container>

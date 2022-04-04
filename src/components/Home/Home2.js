@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/Me-black-white3.png";
 import homeLogo from "../../Assets/home-main.svg";
+import { Link } from 'react-router-dom'
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -13,7 +14,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
-      <Container>
+      <Container id="home2">
         <Row>
           <Col md={8} className="home-about-description" >
             <h1 style={{ fontSize: "2.6em" }}>
@@ -49,7 +50,9 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> React.js and Next.js. </b>
+                Checkout my
+                <b className="purple"> <Link to="/project"> Portfolio </Link> </b>
               </i>
             </p>
           </Col>
@@ -116,7 +119,7 @@ function Home2() {
           </Col>
         </Row>
       </Container>
-    </Container>
+    </Container >
   );
 }
 export default Home2;

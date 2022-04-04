@@ -447,6 +447,35 @@ button:focus {
   color: #700c86 !important;
 }
 
+.arrow {
+  color: #801f95;
+
+  transform: scale(2.5);
+  margin-top: 80px;
+
+}
+
+.arrow:hover {
+  transition: 500ms;
+  color: var(--imp-text-color);
+}
+
+.arrowContainer {
+  /* border: solid 2px yellow; */
+  text-align: center;
+  justify-content: center;
+  height: 12vh;
+  transition: 300ms;
+
+}
+
+.arrowContainer:hover {
+  cursor: pointer;
+  transition: 300ms;
+  transform: scale(1.1);
+
+}
+
 /* --------- */
 /* Footer */
 /* --------- */
