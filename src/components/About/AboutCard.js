@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { GiMountainClimbing } from "react-icons/gi";
 
 function AboutCard() {
   return (
@@ -10,31 +11,26 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Patryk Reba </span>
             from <span className="purple"> Wrocław (WrocLove❤), Poland.</span>
-            <br />I am owner of CLIMBIUM Patryk Reba, e-commerce buisness, where
-            we sell supplements for climbers.
+            <br />Apart from coding, I am the owner of CLIMBIUM Patryk Reba, an e-commerce business, where
+            we compose and deliver the best supplements for climbers.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            Some activities and interests that I love:
           </p>
           <ul>
-            <li className="about-activity">
-              <ImPointRight /> Parkour
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writting Tech Blogs
-            </li>
             <li className="about-activity">
               🎸 Guitar playing.
             </li>
             <li className="about-activity">
-              🚀 Science.
+              🚀 Reading about Science and Technology.
             </li>
             <li className="about-activity">
-              <ImPointRight /> Rock climbing.
+              <GiMountainClimbing /> Parkour, Climbing, Diving.
             </li>
             <li className="about-activity">
               ✈ Travelling.
-              You can see my pictures and viedeos from travel on {" "}
+              After graduation, I was backpacking for 1 year around south-east Asia.
+              You can see my pictures and videos from my travel on {" "}
               <a href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria">
                 one of my website!
               </a>

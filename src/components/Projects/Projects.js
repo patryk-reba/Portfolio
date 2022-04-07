@@ -7,7 +7,7 @@ import instEco from "../../Assets/Projects/instEco.png";
 import tenzies from "../../Assets/Projects/tenzies.png";
 import podroze from "../../Assets/Projects/podroze.png";
 import climbium from "../../Assets/Projects/climbium.png";
-
+import photoshop from "../../Assets/Projects/photoshop.png";
 
 function Projects() {
   return (
@@ -24,12 +24,23 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
 
+              imgPath={photoshop}
+              isBlog={false}
+              title="PhotoShop"
+              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to his favorites or to a cart and then choose the size and send an order.
+              Build with React (Router, useState, useEffect, useContext, react-icons, forms)"
+              link="https://rebashop.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+
               imgPath={tenzies}
               isBlog={false}
               title="Tenzies Game"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
               link="https://tenzies-game-reba.netlify.app/"
-              style={{ borderRadius: "50%" }}
             />
           </Col>
 
@@ -38,7 +49,7 @@ function Projects() {
               imgPath={climbium}
               isBlog={false}
               title="CLIMBIUM"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              description="Website I build for my e-commerce busisness with WordPress, WooCommerce, HTML, and CSS"
               link="https://climbium.pl/"
             />
           </Col>

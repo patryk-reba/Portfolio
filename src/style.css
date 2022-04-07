@@ -10,6 +10,8 @@ html {
   --imp-text-color: #c770f0;
 }
 
+
+
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -267,9 +269,14 @@ button:focus {
 }
 
 .home-section {
+
   position: relative;
   /* z-index: -1; */
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  /* background-image: url(./Assets/moon.png); */
+  /* background-image: var(--image-gradient), url(./Assets/eth.png); */
+  /* background-position: 65% 50%; */
+  background-size: 70%;
+  /* object-fit: cover; */
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
