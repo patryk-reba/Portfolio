@@ -53,10 +53,15 @@ function Home2() {
               &nbsp; like */}
               <i>
                 {/* <b className="purple"> React.js and Next.js. </b> */}
-                Check out the other sections to find out about my skills and projects I've worked on.
+                Check out my  <b className="purple">
+                  <Link to="/project"> Portfolio
+                  </Link>  projects I've worked on and
+                </b>
+
+                <Link to="/about"><b className="purple">About</b> </Link>
+                section see more info about me and my skills.
                 {/* <b className="purple"> 
-                <Link to="/project"> Portfolio 
-                </Link> 
+        
                 </b> */}
               </i>
             </p>
