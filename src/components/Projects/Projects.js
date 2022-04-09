@@ -10,6 +10,8 @@ import climbium from "../../Assets/Projects/climbium.png";
 import photoshop from "../../Assets/Projects/photoshop.png";
 import fastTyping from "../../Assets/Projects/fast-typing.png";
 import memes from "../../Assets/Projects/memes.png";
+import notes from "../../Assets/Projects/notes.png";
+import pacman from "../../Assets/Projects/pacman.png";
 
 
 
@@ -62,7 +64,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
 
-              imgPath={fastTyping}
+              imgPath={notes}
               isBlog={false}
               title="Notes"
               description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
@@ -81,6 +83,17 @@ function Projects() {
               link="https://meme-generator-reba.netlify.app/"
             />
           </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pacman}
+              isBlog={false}
+              title="Pacman"
+              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              link="https://pacman-reba.netlify.app/"
+            />
+          </Col>
+
 
           <Col md={4} className="project-card">
             <ProjectCard
