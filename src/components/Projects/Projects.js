@@ -9,6 +9,8 @@ import podroze from "../../Assets/Projects/podroze.png";
 import climbium from "../../Assets/Projects/climbium.png";
 import photoshop from "../../Assets/Projects/photoshop.png";
 import fastTyping from "../../Assets/Projects/fast-typing.png";
+import memes from "../../Assets/Projects/memes.png";
+
 
 
 function Projects() {
@@ -54,6 +56,29 @@ function Projects() {
               title="Fast Typing Game"
               description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
               link="https://fast-typing-game-reba.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+
+              imgPath={fastTyping}
+              isBlog={false}
+              title="Notes"
+              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              link="https://notes-reba.netlify.app/"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+
+              imgPath={memes}
+              isBlog={false}
+              title="Memes Generator"
+              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              link="https://meme-generator-reba.netlify.app/"
             />
           </Col>
 
