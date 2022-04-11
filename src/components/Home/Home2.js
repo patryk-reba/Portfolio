@@ -10,6 +10,9 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { ImMail } from "react-icons/im";
+
+
 
 function Home2() {
   return (
@@ -117,16 +120,17 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              {/* <li className="social-icons">
+              <li className="social-icons">
                 <a
-                  href=" "
+                  // href="patykreba@gmail.com "
+                  value="patykreba@gmail.com "
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <ImMail />
                 </a>
-              </li> */}
+              </li>
             </ul>
           </Col>
         </Row>
