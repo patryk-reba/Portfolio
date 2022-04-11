@@ -11,7 +11,13 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Patryk Reba </span>
             from <span className="purple"> Wrocław (WrocLove❤), Poland.</span>
-            <br />Apart from coding, I am the owner of CLIMBIUM Patryk Reba, an e-commerce business, where
+            <br />Apart from coding, I am the owner of <a href="https://climbium.pl">
+
+              CLIMBIUM Patryk Reba
+            </a>
+            ,
+            <br></br>
+            an e-commerce business, where
             we compose and deliver the best supplements for climbers.
             <br />
             <br />
@@ -19,10 +25,10 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-              🎸 Guitar playing.
+              🚀 Science and Technology.
             </li>
             <li className="about-activity">
-              🚀 Reading about Science and Technology.
+              🎸 Guitar playing.
             </li>
             <li className="about-activity">
               <GiMountainClimbing /> Parkour, Climbing, Diving.

@@ -29,12 +29,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-
               imgPath={photoshop}
               isBlog={false}
-              title="PhotoShop"
-              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to his favorites or to a cart and then choose the size and send an order.
-              Build with React (Router, useState, useEffect, useContext, react-icons, forms)"
+              title="E-Photo"
+              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to his favorites or to a cart and then choose the size and send an order."
+              // Build with React (Router, useState, useEffect, useContext, react-icons, forms)
+              tools="React • JavaScript • HTML • CSS"
               link="https://rebashop.netlify.app/"
             />
           </Col>
@@ -45,7 +45,8 @@ function Projects() {
               imgPath={tenzies}
               isBlog={false}
               title="Tenzies Game"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉"
+              tools="React • JavaScript • HTML • CSS"
               link="https://tenzies-game-reba.netlify.app/"
             />
           </Col>
@@ -56,7 +57,8 @@ function Projects() {
               imgPath={fastTyping}
               isBlog={false}
               title="Fast Typing Game"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              description="Click enter and rewrite words from box above as fast as you can i 10 sec. and see how many words you can corectly rewrite in one minute"
+              tools="React • JavaScript • HTML • CSS"
               link="https://fast-typing-game-reba.netlify.app/"
             />
           </Col>
@@ -67,7 +69,8 @@ function Projects() {
               imgPath={notes}
               isBlog={false}
               title="Notes"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              description="Notes app."
+              tools="React • JavaScript • HTML • CSS"
               link="https://notes-reba.netlify.app/"
             />
           </Col>
@@ -79,7 +82,8 @@ function Projects() {
               imgPath={memes}
               isBlog={false}
               title="Memes Generator"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              description="Elon Musk would be delighted!"
+              tools="React • JavaScript • REST API • HTML • CSS"
               link="https://meme-generator-reba.netlify.app/"
             />
           </Col>
@@ -89,8 +93,21 @@ function Projects() {
               imgPath={pacman}
               isBlog={false}
               title="Pacman"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉 Build with React."
+              description="Classic game build with JavaScript"
+              tools="JavaScript • HTML • CSS"
               link="https://pacman-reba.netlify.app/"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pacman}
+              isBlog={false}
+              title="Snake"
+              description="Classic game build with JavaScript"
+              tools="JavaScript • HTML • CSS"
+              link="https://snake-reba.netlify.app/"
             />
           </Col>
 
@@ -100,7 +117,8 @@ function Projects() {
               imgPath={climbium}
               isBlog={false}
               title="CLIMBIUM"
-              description="Website I build for my e-commerce busisness with WordPress, WooCommerce, HTML, and CSS"
+              description="Website I build for my e-commerce busisness"
+              tools="WordPress • WooCommerce • Elementor • HTML • CSS"
               link="https://climbium.pl/"
             />
           </Col>
@@ -110,7 +128,8 @@ function Projects() {
               imgPath={instEco}
               isBlog={false}
               title="INST-ECO"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              description="Busissnes website I've made for INST-ECO company. "
+              tools="WordPress • Elementor • HTML • CSS"
               link="http://insteco.pl/"
             />
           </Col>
@@ -120,7 +139,8 @@ function Projects() {
               imgPath={podroze}
               isBlog={false}
               title="My travels"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
+              description="Website with pictures and videos I've made during one year of backpacking."
+              tools="WordPress • Elementor • HTML • CSS"
               link="http://reba95.webd.pro/podrozeksztalca.pl/"
             />
           </Col>
