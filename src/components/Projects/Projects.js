@@ -12,6 +12,8 @@ import fastTyping from "../../Assets/Projects/fast-typing.png";
 import memes from "../../Assets/Projects/memes.png";
 import notes from "../../Assets/Projects/notes.png";
 import pacman from "../../Assets/Projects/pacman.png";
+import pacman from "../../Assets/Projects/snake.png";
+
 
 
 
@@ -102,7 +104,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pacman}
+              imgPath={snake}
               isBlog={false}
               title="Snake"
               description="Classic game build with JavaScript"
