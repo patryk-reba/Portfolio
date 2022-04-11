@@ -12,7 +12,7 @@ import fastTyping from "../../Assets/Projects/fast-typing.png";
 import memes from "../../Assets/Projects/memes.png";
 import notes from "../../Assets/Projects/notes.png";
 import pacman from "../../Assets/Projects/pacman.png";
-import pacman from "../../Assets/Projects/snake.png";
+import snake from "../../Assets/Projects/snake.png";
 
 
 

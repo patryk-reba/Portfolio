@@ -14,7 +14,8 @@ import {
   SiCss3,
   SiNetlify,
   SiCanva,
-  SiWoocommerce
+  SiWoocommerce,
+  SiTypescript
 } from "react-icons/si";
 import { FaHardHat } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -58,6 +59,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiCss3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTypescript />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiSolidity />
