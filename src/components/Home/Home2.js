@@ -119,8 +119,8 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
-                {/* </li>
-              <li className="social-icons">
+              </li>
+              {/* <li className="social-icons">
                 <a
                   // href="patykreba@gmail.com "
                   value="patykreba@gmail.com "
