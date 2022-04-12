@@ -119,7 +119,7 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
-              </li>
+                {/* </li>
               <li className="social-icons">
                 <a
                   // href="patykreba@gmail.com "
@@ -130,7 +130,7 @@ function Home2() {
                 >
                   <ImMail />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>
