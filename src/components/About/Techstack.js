@@ -79,7 +79,7 @@ function Techstack() {
         <BsWordpress />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiWoocommerce size={120} />
+        <SiWoocommerce />
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">

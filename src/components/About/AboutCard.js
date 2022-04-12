@@ -44,12 +44,12 @@ function AboutCard() {
 
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Except for time spent with friends and a night with a beautiful girl,
+          {/* <p style={{ color: "rgb(155 126 172)" }}>
+            "Except for time spent with friends and a night with a beautiful woman,
             there is nothing more beautiful than "aha!" moments when you try
             to solve a problem!"{" "}
-          </p>
-          <footer className="blockquote-footer">Patryk</footer>
+          </p> */}
+          {/* <footer className="blockquote-footer">Patryk</footer> */}
         </blockquote>
       </Card.Body>
     </Card>
@@ -57,3 +57,7 @@ function AboutCard() {
 }
 
 export default AboutCard;
+
+// "Except for time spent with friends and a night with a beautiful girl,
+// there is nothing more beautiful than "aha!" moments when you try
+// to solve a problem!"{" "}
