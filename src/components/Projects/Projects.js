@@ -34,7 +34,7 @@ function Projects() {
               imgPath={photoshop}
               isBlog={false}
               title="E-Photo"
-              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to his favorites or to a cart and then choose the size and send an order."
+              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
               // Build with React (Router, useState, useEffect, useContext, react-icons, forms)
               tools="React • JavaScript • HTML • CSS"
               link="https://rebashop.netlify.app/"
@@ -47,7 +47,7 @@ function Projects() {
               imgPath={tenzies}
               isBlog={false}
               title="Tenzies Game"
-              description="The player can choose if he wants to play with doted dies or with numbered. When the player starts a game, the timer is running until he/she finds all same dies. And then confetti comes🎉"
+              description="The player can choose if he wants to play with doted dies or with numbered. When the game starts, the timer is running until all same dies are found. Then confetti comes🎉"
               tools="React • JavaScript • HTML • CSS"
               link="https://tenzies-game-reba.netlify.app/"
             />
@@ -59,7 +59,7 @@ function Projects() {
               imgPath={fastTyping}
               isBlog={false}
               title="Fast Typing Game"
-              description="Click enter and rewrite words from box above as fast as you can i 10 sec. and see how many words you can corectly rewrite in one minute"
+              description="Click enter and rewrite words from box above as fast as you can in 10 sec. and see how many words you can corectly rewrite in one minute. Check yourself!"
               tools="React • JavaScript • HTML • CSS"
               link="https://fast-typing-game-reba.netlify.app/"
             />
@@ -92,6 +92,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              style={{ textAlign: 'center' }}
               imgPath={pacman}
               isBlog={false}
               title="Pacman"
