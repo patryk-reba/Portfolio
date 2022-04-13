@@ -108,7 +108,7 @@ function Projects() {
               imgPath={snake}
               isBlog={false}
               title="Snake"
-              description="Classic game built with JavaScript"
+              description="🐍Classic game built with JavaScript🐍 Nokia 3310, I miss you.."
               tools="JavaScript • HTML • CSS"
               link="https://snake-reba.netlify.app/"
             />
