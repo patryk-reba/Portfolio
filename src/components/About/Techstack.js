@@ -26,24 +26,15 @@ import { BsWordpress } from "react-icons/bs";
 
 function Techstack() {
 
-  const [showBox, setState] = React.useState(false)
-  function handleBoxToggle() {
-    return setState(prevState => !prevState)
-  }
+
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       {/* <Col xs={4} md={2} className="tech-icons">
         <CgCPlusPlus />
       </Col> */}
-      <Col xs={4} md={2} className="tech-icons"
-        onClick={handleBoxToggle}
-        onMouseEnter={handleBoxToggle}
-        onMouseLeave={handleBoxToggle}
-      >
-        <DiJavascript1
-          className={showBox ? "showSkillIcone" : " "} />
-        <h3 className={showBox ? " " : "showSkillIcone"}>Javascript</h3>
+      <Col xs={4} md={2} className="tech-icons"     >
+        <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiReact />

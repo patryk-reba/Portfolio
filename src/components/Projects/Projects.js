@@ -35,7 +35,7 @@ function Projects() {
               isBlog={false}
               title="E-Photo"
               description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
-              // Build with React (Router, useState, useEffect, useContext, react-icons, forms)
+              // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
               tools="React • JavaScript • HTML • CSS"
               link="https://rebashop.netlify.app/"
             />
@@ -96,7 +96,7 @@ function Projects() {
               imgPath={pacman}
               isBlog={false}
               title="Pacman"
-              description="Classic game build with JavaScript"
+              description="Classic game built with JavaScript"
               tools="JavaScript • HTML • CSS"
               link="https://pacman-reba.netlify.app/"
             />
@@ -108,7 +108,7 @@ function Projects() {
               imgPath={snake}
               isBlog={false}
               title="Snake"
-              description="Classic game build with JavaScript"
+              description="Classic game built with JavaScript"
               tools="JavaScript • HTML • CSS"
               link="https://snake-reba.netlify.app/"
             />
@@ -120,7 +120,7 @@ function Projects() {
               imgPath={climbium}
               isBlog={false}
               title="CLIMBIUM"
-              description="Website I build for my e-commerce busisness"
+              description="Website I built for my e-commerce business"
               tools="WordPress • WooCommerce • Elementor • HTML • CSS"
               link="https://climbium.pl/"
             />
