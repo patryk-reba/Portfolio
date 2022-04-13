@@ -102,7 +102,6 @@ function Projects() {
             />
           </Col>
 
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={snake}
@@ -113,7 +112,6 @@ function Projects() {
               link="https://snake-reba.netlify.app/"
             />
           </Col>
-
 
           <Col md={4} className="project-card">
             <ProjectCard

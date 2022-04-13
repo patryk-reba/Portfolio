@@ -26,12 +26,12 @@ function Education() {
         onMouseLeave={handleBoxToggle}
       ></Col> */}
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://scrimba.com/">
+        <a href="https://scrimba.com/" target="_blank">
           <img src={scrimba} alt="Scrimba" className="img-fluid" />
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://cs50.harvard.edu/college/2022/spring/">
+        <a href="https://cs50.harvard.edu/college/2022/spring/" target="_blank">
           <img src={cs50} alt="CS50" className="img-fluid" />
         </a>
       </Col>
@@ -41,17 +41,17 @@ function Education() {
         </a>
       </Col> */}
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://www.freecodecamp.org/learn/">
+        <a href="https://www.freecodecamp.org/learn/" target="_blank">
           <img src={fcc} alt="freeCodeCamp" className="img-fluid" />
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://www.udemy.com/course/blockchain-developer/">
+        <a href="https://www.udemy.com/course/blockchain-developer/" target="_blank">
           <img src={udemy} alt="udemy" className="img-fluid" />
         </a>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <a href="https://cryptozombies.io/">
+        <a href="https://cryptozombies.io/" target="_blank">
           <img src={zombie} alt="zombie" className="img-fluid" style={{ width: "50%" }} />
         </a>
       </Col>

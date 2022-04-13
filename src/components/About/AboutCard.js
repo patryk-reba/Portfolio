@@ -11,7 +11,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Patryk Reba </span>
             from <span className="purple"> Wrocław, Poland.</span>
-            <br />Apart from coding, I am the owner of <a href="https://climbium.pl">
+            <br />Apart from coding, I am the owner of <a href="https://climbium.pl" target="_blank">
 
               CLIMBIUM Patryk Reba
             </a>
@@ -37,8 +37,8 @@ function AboutCard() {
               ✈ Travelling.
               After graduation, I was backpacking for 1 year around south-east Asia.
               You can see my pictures and videos from my travel on {" "}
-              <a href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria">
-                one of my website!
+              <a href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria" target="_blank">
+                one of my websites!
               </a>
             </li>
 

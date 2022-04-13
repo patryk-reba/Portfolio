@@ -20,7 +20,7 @@ function About() {
           Formal <strong className="purple">Education </strong>
         </h1>
         <div className="pwrContainer">
-          <a href="http://pwr.edu.pl/en/">
+          <a href="http://pwr.edu.pl/en/" target="_blank">
             <img className="pwrImg" src={pwrLogo} />
           </a>
 

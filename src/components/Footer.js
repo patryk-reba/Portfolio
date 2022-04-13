@@ -17,7 +17,7 @@ function Footer() {
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Built using
-            <a href="https://reactjs.org/" >
+            <a href="https://reactjs.org/" target="_blank">
               {<DiReact style={{ transform: 'scale(2)', marginLeft: "10px" }} />}
             </a>
           </h3>

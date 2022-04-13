@@ -24,10 +24,14 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              <i>
 
-                Self-taught programmer, passionate about building things with React JS🏗️
-              </i>
+
+              Self-taught programmer, passionate about building things with React JS🏗️
+              Also owner of{" "}
+              <a href="https://climbium.pl" target="_blank">
+                CLIMBIUM Patryk Reba.
+              </a>
+
               <br />
               {/* <br />I am fluent in classics like
               <i>
@@ -35,14 +39,14 @@ function Home2() {
               </i>
               <br /> */}
               <br />
-              <i>
 
-                My field of interest is building new &nbsp;
-                <b className="purple">Web Technologies and Products,  </b> especially in areas related to{" "}
-                <b className="purple">
-                  web 3.0 and Blockchain.
-                </b>
-              </i>
+
+              My field of interest is building new &nbsp;
+              <b className="purple">Web Technologies and Products,  </b> especially in areas related to{" "}
+              <b className="purple">
+                web 3.0 and Blockchain.
+              </b>
+
               <br />
               <br />
               {/* Whenever possible, I also apply my passion for developing products
@@ -54,21 +58,21 @@ function Home2() {
                 </b>
               </i>
               &nbsp; like */}
-              <i>
-                {/* <b className="purple"> React.js and Next.js. </b> */}
-                Check out my {" "}
-                <Link to="/project">
-                  <b className="purple">
-                    Portfolio
-                  </b>
-                </Link> to see projects I've worked on and {" "}
 
-                <Link to="/about"><b className="purple">About</b></Link>{" "}
-                section to find out more about me and my skills.
-                {/* <b className="purple"> 
+              {/* <b className="purple"> React.js and Next.js. </b> */}
+              Check out my {" "}
+              <Link to="/project">
+                <b className="purple">
+                  Portfolio
+                </b>
+              </Link> to see projects I've worked on and {" "}
+
+              <Link to="/about"><b className="purple">About</b></Link>{" "}
+              section to find out more about me and my skills.
+              {/* <b className="purple"> 
         
                 </b> */}
-              </i>
+
             </p>
           </Col>
           <Col md={4} className="myAvtar">
