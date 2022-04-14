@@ -13,6 +13,8 @@ import memes from "../../Assets/Projects/memes.png";
 import notes from "../../Assets/Projects/notes.png";
 import pacman from "../../Assets/Projects/pacman.png";
 import snake from "../../Assets/Projects/snake.png";
+import chrome from "../../Assets/Projects/chrome.png";
+
 
 
 
@@ -87,6 +89,18 @@ function Projects() {
               description="Elon Musk would be delighted!"
               tools="React • JavaScript • REST API • HTML • CSS"
               link="https://meme-generator-reba.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: 'center' }}
+              imgPath={chrome}
+              isBlog={false}
+              title="Dashboard"
+              description="Chrome extension built using several APIs"
+              tools="JavaScript • HTML • CSS"
+              link="https://pacman-reba.netlify.app/"
             />
           </Col>
 
