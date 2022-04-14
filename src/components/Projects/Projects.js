@@ -100,7 +100,7 @@ function Projects() {
               title="Dashboard"
               description="Chrome extension built using several APIs"
               tools="JavaScript • HTML • CSS"
-              link="https://pacman-reba.netlify.app/"
+              link="https://github.com/patryk-reba/Chrome-extension-dashboard"
             />
           </Col>
 
