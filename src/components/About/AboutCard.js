@@ -35,7 +35,7 @@ function AboutCard() {
             </li>
             <li className="about-activity">
               ✈ Travelling.
-              After graduation, I was backpacking for 1 year around south-east Asia.
+              After graduation, I was backpacking for 1 year around South-East Asia.
               You can see my pictures and videos from my travel on {" "}
               <a href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria" target="_blank">
                 one of my websites!
