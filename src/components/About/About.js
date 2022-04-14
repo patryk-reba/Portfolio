@@ -19,8 +19,8 @@ function About() {
         <h1 className="project-heading">
           Formal <strong className="purple">Education </strong>
         </h1>
-        <div className="pwrContainer">
-          <a href="http://pwr.edu.pl/en/" target="_blank">
+        <div>
+          <a href="http://pwr.edu.pl/en/" target="_blank" className="pwrContainer">
             <img className="pwrImg" src={pwrLogo} />
           </a>
 
