@@ -14,6 +14,8 @@ import notes from "../../Assets/Projects/notes.png";
 import pacman from "../../Assets/Projects/pacman.png";
 import snake from "../../Assets/Projects/snake.png";
 import chrome from "../../Assets/Projects/chrome.png";
+import amazon from "../../Assets/Projects/amazon.png";
+
 
 
 
@@ -33,13 +35,13 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={photoshop}
+
+              imgPath={amazon}
               isBlog={false}
-              title="E-Photo"
-              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
-              // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
-              tools="React • JavaScript • HTML • CSS"
-              link="https://rebashop.netlify.app/"
+              title="Amazon-clone"
+              description="Full-stack Amazon Clone with firebase authentication, cloud function to process payment (servesless), real time database"
+              tools="React • Firebase • JavaScript • HTML • CSS"
+              link="https://clone-f512b.web.app/"
             />
           </Col>
 
@@ -64,6 +66,19 @@ function Projects() {
               description="Click enter and rewrite words from box above as fast as you can in 10 sec. and see how many words you can corectly rewrite in one minute. Check yourself!"
               tools="React • JavaScript • HTML • CSS"
               link="https://fast-typing-game-reba.netlify.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={photoshop}
+              isBlog={false}
+              title="E-Photo"
+              description="Demo version of photo e-commerce"
+              // description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
+
+              // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
+              tools="React • JavaScript • HTML • CSS"
+              link="https://rebashop.netlify.app/"
             />
           </Col>
 
