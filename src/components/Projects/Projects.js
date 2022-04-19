@@ -39,7 +39,7 @@ function Projects() {
               imgPath={amazon}
               isBlog={false}
               title="Amazon-clone"
-              description="Full-stack Amazon Clone with firebase authentication, cloud function to process payment (servesless), real time database"
+              description="Full-stack Amazon Clone with firebase authentication, cloud function to process payment (servesless), real time database. Type credit card number as: 4242 4242 4242 4242 cvv:42424 valid date:0424"
               tools="React • Firebase • JavaScript • HTML • CSS"
               link="https://clone-f512b.firebaseapp.com/"
             />
