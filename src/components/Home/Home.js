@@ -22,15 +22,12 @@ function Home() {
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
-
               </h1>
-
               <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> PATRYK</strong>
                 <strong className="main-name secondName"> REBA</strong>
               </h1>
-
               <div style={{ padding: 50, paddingTop: 10, textAlign: "left" }}>
                 <Type />
               </div>
@@ -46,15 +43,12 @@ function Home() {
                 <img src={myImg} className="img-fluid" alt="avatar" style={{ borderRadius: "100%", maxHeight: "450px", }} />
               </Tilt>
             </Col>
-
             <HashLink to="#home2" >
               <div className="arrowContainer">
 
                 <BsFillArrowDownCircleFill size={40} className="arrow" />
               </div>
             </HashLink>
-
-
           </Row>
         </Container>
         <Home2 />
