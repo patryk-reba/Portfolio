@@ -26,7 +26,11 @@ function AboutCard() {
           <ul>
             <li className="about-activity">
               🚀 Science and Technology.
-            </li>
+            </li>   
+
+
+
+            
             <li className="about-activity">
               🎸 Guitar playing.
             </li>

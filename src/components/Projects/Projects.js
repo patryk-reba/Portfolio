@@ -16,51 +16,51 @@ import snake from "../../Assets/Projects/snake.png";
 import chrome from "../../Assets/Projects/chrome.png";
 import amazon from "../../Assets/Projects/amazon.png";
 
-
-
-
-
-
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My  <strong className="purple ">PORTFOLIO </strong>
+          My <strong className="purple ">PORTFOLIO </strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
         <h2 className="project-category">
-          <strong className="purple" >Full-stack </strong>
+          <strong className="purple">Full-stack </strong>
         </h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
-            <ProjectCard style={{ textAlign: 'left' }}
+            <ProjectCard
+              style={{ textAlign: "left" }}
               imgPath={amazon}
               isBlog={false}
               title="Amazon-clone"
-              description={<ul>
-                <li>Checkout/payment page with stripe functionality</li>
-                <li>React context API</li>
-                <li>Built Login Page with full login functionality (sign up and sign in) with firebase authentication</li>
-                <li>Deployed cloud function to process payment (servesless)</li>
-                <li>Firebase for real time database</li>
-                <li>Deployed the App LIVE on Firebase</li>
-                <li>Stores orders for logged in user</li>
-                <li>Responsive Design</li>
-              </ul>}
+              description={
+                <ul>
+                  <li>Checkout/payment page with stripe functionality</li>
+                  <li>React context API</li>
+                  <li>
+                    Login Page with full login functionality (sign up and sign
+                    in) with firebase authentication
+                  </li>
+                  <li>Cloud function to process payment (servesless)</li>
+                  <li>Firebase for real time database</li>
+                  <li>Deployed LIVE on Firebase</li>
+                  <li>Stores orders for logged in user</li>
+                  <li>Responsive Design</li>
+                </ul>
+              }
               tools="React • Firebase • JavaScript • HTML • CSS"
               link="https://clone-f512b.firebaseapp.com/"
             />
           </Col>
         </Row>
         <h2>
-          <strong className="purple" >React JS</strong>
+          <strong className="purple">React JS</strong>
         </h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={tenzies}
@@ -95,7 +95,6 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-
               imgPath={notes}
               isBlog={false}
               title="Notes"
@@ -106,7 +105,6 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-
               imgPath={memes}
               isBlog={false}
               title="Memes Generator"
@@ -116,11 +114,11 @@ function Projects() {
             />
           </Col>
           <h2>
-            <strong className="purple" >Vanilla JavaScript </strong>
+            <strong className="purple">Vanilla JavaScript </strong>
           </h2>
           <Col md={4} className="project-card">
             <ProjectCard
-              style={{ textAlign: 'center' }}
+              style={{ textAlign: "center" }}
               imgPath={chrome}
               isBlog={false}
               title="Dashboard"
@@ -132,7 +130,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              style={{ textAlign: 'center' }}
+              style={{ textAlign: "center" }}
               imgPath={pacman}
               isBlog={false}
               title="Pacman"
@@ -152,7 +150,7 @@ function Projects() {
             />
           </Col>
           <h2>
-            <strong className="purple" >WordPress</strong>
+            <strong className="purple">WordPress</strong>
           </h2>
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
@@ -185,7 +183,6 @@ function Projects() {
                 link="http://reba95.webd.pro/podrozeksztalca.pl/"
               />
             </Col>
-
           </Row>
         </Row>
       </Container>
