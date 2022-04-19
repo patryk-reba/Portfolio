@@ -42,8 +42,8 @@ function Projects() {
               isBlog={false}
               title="Amazon-clone"
               description={<ul>
-                <li>Checkout/ payment page with stripe functionality</li>
-                <li>Completed the checkout screen with the React context API</li>
+                <li>Checkout/payment page with stripe functionality</li>
+                <li>React context API</li>
                 <li>Built Login Page with full login functionality (sign up and sign in) with firebase authentication</li>
                 <li>Deployed cloud function to process payment (servesless)</li>
                 <li>Firebase for real time database</li>
