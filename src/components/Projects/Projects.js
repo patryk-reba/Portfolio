@@ -41,7 +41,7 @@ function Projects() {
               title="Amazon-clone"
               description="Full-stack Amazon Clone with firebase authentication, cloud function to process payment (servesless), real time database"
               tools="React • Firebase • JavaScript • HTML • CSS"
-              link="https://clone-f512b.web.app/"
+              link="https://clone-f512b.firebaseapp.com/"
             />
           </Col>
 
