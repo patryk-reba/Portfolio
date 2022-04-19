@@ -16,6 +16,11 @@ html {
   color: var(--imp-text-color) !important;
 }
 
+.project-category {
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
 button:focus {
   box-shadow: none !important;
 }
