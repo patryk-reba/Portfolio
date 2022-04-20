@@ -11,41 +11,41 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Patryk Reba </span>
             from <span className="purple"> Wrocław, Poland.</span>
-            <br />Apart from coding, I am the owner of <a href="https://climbium.pl" target="_blank">
-
-              CLIMBIUM Patryk Reba
+            <br />
+            Apart from coding, I am the owner of{" "}
+            <a
+              href="https://climbium.pl"
+              style={{ textDecoration: "none" }}
+              target="_blank"
+            >
+              <span className="purple">CLIMBIUM Patryk Reba</span>
             </a>
-            ,
-            <br></br>
-            an e-commerce business, where
-            we compose and deliver the best supplements for climbers.
+            ,<br></br>
+            an e-commerce business, where we compose and deliver the best
+            supplements for climbers.
             <br />
             <br />
             Some activities and interests that I love:
           </p>
           <ul>
-            <li className="about-activity">
-              🚀 Science and Technology.
-            </li>   
+            <li className="about-activity">🚀 Science and Technology.</li>
 
-
-
-            
-            <li className="about-activity">
-              🎸 Guitar playing.
-            </li>
+            <li className="about-activity">🎸 Guitar playing.</li>
             <li className="about-activity">
               <GiMountainClimbing /> Parkour, Climbing, Diving.
             </li>
             <li className="about-activity">
-              ✈ Travelling.
-              After graduation, I was backpacking for 1 year around South-East Asia.
-              You can see my pictures and videos from my travel on {" "}
-              <a href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria" target="_blank">
-                one of my websites!
+              ✈ Travelling. After graduation, I was backpacking for 1 year
+              around South-East Asia. You can see my pictures and videos from my
+              travel on{"  "}
+              <a
+                style={{ textDecoration: "none" }}
+                href="http://reba95.webd.pro/podrozeksztalca.pl/#galeria"
+                target="_blank"
+              >
+                <span className="purple">one of my websites!</span>
               </a>
             </li>
-
           </ul>
 
           {/* <p style={{ color: "rgb(155 126 172)" }}>

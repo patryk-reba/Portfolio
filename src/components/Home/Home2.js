@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/Me-black-white3.png";
 import homeLogo from "../../Assets/home-main.svg";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -12,26 +12,25 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 
-
-
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container id="home2">
         <Row>
-          <Col md={8} className="home-about-description" >
+          <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-
-
-              Self-taught programmer, passionate about building things with React JS🏗️
-              Also owner of{" "}
-              <a href="https://climbium.pl" target="_blank">
-                CLIMBIUM Patryk Reba.
+              Self-taught programmer, passionate about building things with
+              React JS🏗️ Also owner of{" "}
+              <a
+                href="https://climbium.pl"
+                target="_blank"
+                style={{ textDecoration: "none", color: "" }}
+              >
+                <b className="purple">CLIMBIUM Patryk Reba.</b>
               </a>
-
               <br />
               {/* <br />I am fluent in classics like
               <i>
@@ -39,14 +38,10 @@ function Home2() {
               </i>
               <br /> */}
               <br />
-
-
               My field of interest is building new &nbsp;
-              <b className="purple">Web Technologies and Products,  </b> especially in areas related to{" "}
-              <b className="purple">
-                web 3.0 and Blockchain.
-              </b>
-
+              <b className="purple">Web Technologies and Products, </b>{" "}
+              especially in areas related to{" "}
+              <b className="purple">web 3.0 and Blockchain.</b>
               <br />
               <br />
               {/* Whenever possible, I also apply my passion for developing products
@@ -58,21 +53,19 @@ function Home2() {
                 </b>
               </i>
               &nbsp; like */}
-
               {/* <b className="purple"> React.js and Next.js. </b> */}
-              Check out my {" "}
-              <Link to="/project">
-                <b className="purple">
-                  Portfolio
-                </b>
-              </Link> to see projects I've worked on and {" "}
-
-              <Link to="/about"><b className="purple">About</b></Link>{" "}
+              Check out my{" "}
+              <Link to="/project" style={{ textDecoration: "none" }}>
+                <b className="purple">Portfolio</b>
+              </Link>{" "}
+              to see projects I've worked on and{" "}
+              <Link to="/about" style={{ textDecoration: "none" }}>
+                <b className="purple">About</b>
+              </Link>{" "}
               section to find out more about me and my skills.
               {/* <b className="purple"> 
         
                 </b> */}
-
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -139,7 +132,7 @@ function Home2() {
           </Col>
         </Row>
       </Container>
-    </Container >
+    </Container>
   );
 }
 export default Home2;
