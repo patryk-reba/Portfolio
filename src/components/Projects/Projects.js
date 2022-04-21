@@ -168,7 +168,7 @@ function Projects() {
                 imgPath={instEco}
                 isBlog={false}
                 title="INST-ECO"
-                description="Busissnes website I've made for INST-ECO company. "
+                description="Business website I've made for INST-ECO company. "
                 tools="WordPress • Elementor • HTML • CSS"
                 link="http://insteco.pl/"
               />
