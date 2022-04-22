@@ -49,6 +49,7 @@ function Projects() {
                   <li>Firebase for real time database</li>
                   <li>Deployed LIVE on Firebase</li>
                   <li>Stores orders for logged in user</li>
+                  <li>Geolocation</li>
                   <li>Responsive Design</li>
                 </ul>
               }
