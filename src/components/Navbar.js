@@ -46,7 +46,6 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-
           {/* /* <ul className="home-about-social-links">
             <li className="social-icons">
               <a
@@ -71,7 +70,6 @@ function NavBar() {
             </li>
           </ul>  */}
           <img src={logo2} className="img-fluid logo" alt="brand" />
-
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -90,7 +88,6 @@ function NavBar() {
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
-
 
             <Nav.Item>
               <Nav.Link
