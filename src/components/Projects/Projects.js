@@ -15,6 +15,7 @@ import pacman from "../../Assets/Projects/pacman.png";
 import snake from "../../Assets/Projects/snake.png";
 import chrome from "../../Assets/Projects/chrome.png";
 import amazon from "../../Assets/Projects/amazon.png";
+import twitter from "../../Assets/Projects/twitter.png";
 
 function Projects() {
   return (
@@ -55,6 +56,30 @@ function Projects() {
               }
               tools="React • Firebase • JavaScript • HTML • CSS"
               link="https://clone-f512b.firebaseapp.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: "left" }}
+              imgPath={twitter}
+              isBlog={false}
+              title="Twitter-clone"
+              description={
+                <ul>
+                  <li>Create Tweet and add comment them</li>
+                  <li>Login authentication with Twitter API using NextAuth</li>
+                  <li>Ability to BAN a tweet via the Sanity Platform</li>
+                  <li>Next.js</li>
+                  <li>Sanity CMS</li>
+                  <li> Tailwind CSS</li>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                </ul>
+              }
+              tools="React • Typescript • Next.js • JavaScript • HTML • Tailwind CSS • Sanity CMS"
+              // link="https://clone-f512b.firebaseapp.com/"
             />
           </Col>
         </Row>
