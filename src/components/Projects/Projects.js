@@ -181,16 +181,6 @@ function Projects() {
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
-                imgPath={climbium}
-                isBlog={false}
-                title="CLIMBIUM"
-                description="Website I built for my e-commerce business"
-                tools="WordPress • WooCommerce • Elementor • HTML • CSS"
-                link="https://climbium.pl/"
-              />
-            </Col>
-            <Col md={4} className="project-card">
-              <ProjectCard
                 imgPath={instEco}
                 isBlog={false}
                 title="INST-ECO"
