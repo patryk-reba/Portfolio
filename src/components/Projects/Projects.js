@@ -66,7 +66,7 @@ function Projects() {
               title="Twitter-clone"
               description={
                 <ul>
-                  <li>Create Tweet and add comment them</li>
+                  <li>Users can Tweet and add comments</li>
                   <li>Login authentication with Twitter API using NextAuth</li>
                   <li>Ability to BAN a tweet via the Sanity Platform</li>
                   <li>Next.js</li>
