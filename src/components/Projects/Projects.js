@@ -16,6 +16,7 @@ import snake from "../../Assets/Projects/snake.png";
 import chrome from "../../Assets/Projects/chrome.png";
 import amazon from "../../Assets/Projects/amazon.png";
 import twitter from "../../Assets/Projects/twitter.png";
+import techpulse from "../../Assets/Projects/techpulse.png";
 
 function Projects() {
   return (
@@ -27,37 +28,41 @@ function Projects() {
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
-        </p>
+        </p>{" "}
         <h2 className="project-category">
-          <strong className="purple">Full-stack </strong>
+          <strong className="purple">Current Job</strong>
         </h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               style={{ textAlign: "left" }}
-              imgPath={amazon}
+              imgPath={techpulse}
               isBlog={false}
-              title="Amazon-clone"
+              title="HP TechPulse"
               description={
-                <ul>
-                  <li>Checkout/payment page with stripe functionality</li>
-                  <li>React context API</li>
-                  <li>
-                    Login Page with full login functionality (sign up and sign
-                    in) with firebase authentication
-                  </li>
-                  <li>Cloud function to process payment (servesless)</li>
-                  <li>Firebase for real time database</li>
-                  <li>Deployed LIVE on Firebase</li>
-                  <li>Stores orders for logged in user</li>
-                  <li>Geolocation</li>
-                  <li>Responsive Design</li>
-                </ul>
+                <>
+                  <p>
+                    HP TechPulse1 is a cloud-based telemetry and analytics
+                    platform that aggregates critical data from devices and
+                    applications, putting deep insights at IT’s fingertips to
+                    predict and resolve device issues before they impact
+                    employees.
+                  </p>
+                  <ul>
+                    My role is:
+                    <li>Adding new components and functionalities</li>
+                    <li>Debugging</li>
+                    <li>Code reviewing</li>
+                  </ul>
+                </>
               }
-              tools="React • Firebase • JavaScript • HTML • CSS"
-              link="https://clone-f512b.firebaseapp.com/"
+              tools="React • react-i18next • JavaScript • HTML • CSS • Highcharts "
+              link="https://www.hp.com/us-en/services/techpulse.html"
             />
           </Col>
+          <h2 className="project-category">
+            <strong className="purple">Full-stack </strong>
+          </h2>
           <Col md={4} className="project-card">
             <ProjectCard
               style={{ textAlign: "left" }}
