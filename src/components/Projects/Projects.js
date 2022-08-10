@@ -42,7 +42,7 @@ function Projects() {
               description={
                 <>
                   <p>
-                    HP TechPulse1 is a cloud-based telemetry and analytics
+                    HP TechPulse is a cloud-based telemetry and analytics
                     platform that aggregates critical data from devices and
                     applications, putting deep insights at IT’s fingertips to
                     predict and resolve device issues before they impact
