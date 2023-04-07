@@ -128,7 +128,7 @@ function Projects() {
               title="Tenzies Game"
               description="The player can choose if he wants to play with doted dies or with numbered. When the game starts, the timer is running until all same dies are found. Then confetti comes🎉"
               tools="React • JavaScript • HTML • CSS"
-              link="https://tenzies-game-reba.netlify.app/"
+              link="https://tenzies-game-123.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -138,7 +138,7 @@ function Projects() {
               title="Fast Typing Game"
               description="Click enter and rewrite words from box above as fast as you can in 10 sec. and see how many words you can corectly rewrite in one minute. Check yourself!"
               tools="React • JavaScript • HTML • CSS"
-              link="https://fast-typing-game-reba.netlify.app/"
+              link="https://fast-typing-game-123.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -150,7 +150,7 @@ function Projects() {
               description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
               // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
               tools="React • JavaScript • HTML • CSS"
-              link="https://rebashop.netlify.app/"
+              link="https://ephoto-123.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -160,7 +160,7 @@ function Projects() {
               title="Notes"
               description="Notes app."
               tools="React • JavaScript • HTML • CSS"
-              link="https://notes-reba.netlify.app/"
+              link="https://notes-123.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -170,7 +170,7 @@ function Projects() {
               title="Memes Generator"
               description="Elon Musk would be delighted!"
               tools="React • JavaScript • REST API • HTML • CSS"
-              link="https://meme-generator-reba.netlify.app/"
+              link="https://meme-generator-123.netlify.app/"
             />
           </Col>
           <h2>
@@ -196,7 +196,7 @@ function Projects() {
               title="Pacman"
               description="Classic game built with JavaScript"
               tools="JavaScript • HTML • CSS"
-              link="https://pacman-reba.netlify.app/"
+              link="https://pacman-123.netlify.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -206,7 +206,7 @@ function Projects() {
               title="Snake"
               description="🐍Classic game built with JavaScript🐍 Nokia 3310, I miss you.."
               tools="JavaScript • HTML • CSS"
-              link="https://snake-reba.netlify.app/"
+              link="https://snake-123.netlify.app/"
             />
           </Col>
           <h2>
