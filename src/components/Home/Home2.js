@@ -39,9 +39,8 @@ function Home2() {
               <br /> */}
               <br />
               My field of interest is building new &nbsp;
-              <b className="purple">Web Technologies and Products, </b>{" "}
-              especially in areas related to{" "}
-              <b className="purple">web 3.0 and Blockchain.</b>
+              <b className="purple">Web Apps and Products, </b> especially in
+              <b className="purple">React.</b>
               <br />
               <br />
               {/* Whenever possible, I also apply my passion for developing products
