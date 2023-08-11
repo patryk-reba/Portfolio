@@ -40,7 +40,7 @@ function Home2() {
               <br />
               My field of interest is building new &nbsp;
               <b className="purple">Web Apps and Products, </b> especially in
-              <b className="purple">React.</b>
+              <b className="purple"> React.</b>
               <br />
               <br />
               {/* Whenever possible, I also apply my passion for developing products
