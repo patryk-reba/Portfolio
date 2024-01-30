@@ -10,6 +10,15 @@ import Education from "./Education";
 function About() {
   return (
     <Container fluid className="about-section">
+      <iframe
+        width="550vw"
+        height="300vh"
+        src="https://www.youtube.com/embed/Et1DElvCDE0?si=AYndRNTtMbJdIl8y"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        style={{ zIndex: "1000" }}
+        allowFullScreen
+      ></iframe>
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -20,10 +29,13 @@ function About() {
           Formal <strong className="purple">Education </strong>
         </h1>
         <div>
-          <a href="http://pwr.edu.pl/en/" target="_blank" className="pwrContainer">
+          <a
+            href="http://pwr.edu.pl/en/"
+            target="_blank"
+            className="pwrContainer"
+          >
             <img className="pwrImg" src={pwrLogo} />
           </a>
-
         </div>
         <h1 className="project-heading">
           Programming <strong className="purple">Education </strong>
@@ -53,7 +65,6 @@ function About() {
             {/* <img src={parkourImg} alt="about" className="img-fluid" style={{ borderRadius: "20%" }} /> */}
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
-
         </Row>
 
         {/* <h1 className="project-heading">

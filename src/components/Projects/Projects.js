@@ -17,6 +17,7 @@ import chrome from "../../Assets/Projects/chrome.png";
 import amazon from "../../Assets/Projects/amazon.png";
 import twitter from "../../Assets/Projects/twitter.png";
 import techpulse from "../../Assets/Projects/techpulse.png";
+import voith from "../../Assets/Projects/voith.webp";
 
 function Projects() {
   return (
@@ -27,9 +28,58 @@ function Projects() {
         <h1 className="project-heading">
           My <strong className="purple ">PORTFOLIO </strong>
         </h1>
-        <h2 className="project-category">
+        {/* <h2 className="project-category">
           <strong className="purple">Current Job</strong>
-        </h2>
+        </h2> */}
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: "left" }}
+              imgPath={voith}
+              isBlog={false}
+              title="Voith Shop"
+              description={
+                <>
+                  <ul>
+                    <li>
+                      Worked on Large-Scale, Multi-Language E-Commerce Store.
+                    </li>
+                    <li>
+                      Collaborated with businesses to enhance UI/UX, improving
+                      user experience and website effectiveness.
+                    </li>
+                    <li>
+                      Transitioned from Bootstrap to Tailwind CSS, adopting a
+                      more streamlined and flexible design approach.
+                      Standardized site design through the creation of a style
+                      guide and Storybook, utilizing Tailwind CSS and Atomic
+                      Design principles, ensuring consistent sizing, spacing,
+                      and typography.
+                    </li>
+                    Rapidly reduced frontend development backlog, enabling the
+                    team to catch up within two sprints after joining.
+                    <li>
+                      Aligned UI/UX designs using tools like StoryBook and
+                      Figma, coordinating with backend developers for smooth
+                      integration.
+                    </li>
+                    <li>
+                      Tested and ensured reusable components functionality,
+                      cleaned up legacy code and avoided technical debt during
+                      the redesign process, meeting all user story acceptance
+                      criteria.
+                    </li>
+                    Integrated analytics tool to track events on the website.
+                    Improved overall workflow and communication by proposing
+                    developers join business meetings
+                  </ul>
+                </>
+              }
+              tools="React • Bootstrap • TypeScript • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
+              link="https://voith.com/corp-en/services/servolution/voith-paper-webshop.html"
+            />
+          </Col>
+        </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -46,12 +96,6 @@ function Projects() {
                     predict and resolve device issues before they impact
                     employees.
                   </p>
-                  <ul>
-                    My role is:
-                    <li>Adding new components and functionalities</li>
-                    <li>Debugging</li>
-                    <li>Code reviewing</li>
-                  </ul>
                 </>
               }
               tools="React • react-i18next • JavaScript • HTML • CSS • Highcharts "
@@ -209,17 +253,27 @@ function Projects() {
               link="https://snake-123.netlify.app/"
             />
           </Col>
-          <h2>
+          {/* <h2>
             <strong className="purple">WordPress</strong>
-          </h2>
+          </h2> */}
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={climbium}
+                isBlog={false}
+                title="CLIMBIUM"
+                description="Website I built for my e-commerce business"
+                // tools="WordPress • WooCommerce • Elementor • HTML • CSS"
+                link="https://climbium.pl/"
+              />
+            </Col>
             <Col md={4} className="project-card">
               <ProjectCard
                 imgPath={instEco}
                 isBlog={false}
                 title="INST-ECO"
                 description="Business website I've made for INST-ECO company. "
-                tools="WordPress • Elementor • HTML • CSS"
+                // tools="WordPress • Elementor • HTML • CSS"
                 link="http://insteco.pl/"
               />
             </Col>
@@ -229,7 +283,7 @@ function Projects() {
                 isBlog={false}
                 title="My travels"
                 description="Website with pictures and videos I've made during one year of backpacking."
-                tools="WordPress • Elementor • HTML • CSS"
+                // tools="WordPress • Elementor • HTML • CSS"
                 link="http://reba95.webd.pro/podrozeksztalca.pl/"
               />
             </Col>
