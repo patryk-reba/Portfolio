@@ -18,6 +18,7 @@ import amazon from "../../Assets/Projects/amazon.png";
 import twitter from "../../Assets/Projects/twitter.png";
 import techpulse from "../../Assets/Projects/techpulse.png";
 import voith from "../../Assets/Projects/voith.webp";
+import dashboard from "../../Assets/Projects/nextjs-dashboard.png";
 
 function Projects() {
   return (
@@ -152,6 +153,34 @@ function Projects() {
                   <li> Tailwind CSS</li>
                   <br></br>
                   <br></br>
+                  <br></br>
+                  <br></br>
+                </ul>
+              }
+              tools="React • Typescript • Next.js • JavaScript • HTML • Tailwind CSS • Sanity CMS"
+              // link="https://clone-f512b.firebaseapp.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: "left" }}
+              imgPath={dashboard}
+              isBlog={false}
+              title="Next.js Dashboard"
+              description={
+                <ul>
+                  <li style={{ fontWeight: "700" }}>
+                    Email: user@nextmail.com <br />
+                    Password: 123456
+                  </li>
+                  <li>A public home page.</li>
+                  <li>A login page</li>
+                  <li>Dashboard pages that are protected by authentication</li>
+                  <li>
+                    The ability for users to add, edit, and delete invoices.
+                  </li>
+                  <li>PostgreSQL database</li>
+                  <li> Tailwind CSS</li>
                   <br></br>
                   <br></br>
                 </ul>
