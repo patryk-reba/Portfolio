@@ -48,15 +48,16 @@ function Projects() {
                       protection.
                     </li>
                     <li>
-                      Explore community transformations with user-friendly
-                      pagination.
+                      Interact with Alice, the GPT-4 powered chat assistant, for
+                      instant support and guidance.
+                    </li>
+                    <li>
+                      Generate new images with text prompts using Dall-E AI
+                      creativity.
                     </li>
                     <li>
                       Find images quickly with advanced search by content or
                       objects.
-                    </li>
-                    <li>
-                      Generate new images with text prompts using AI creativity.
                     </li>
                     <li>
                       Revive old or damaged images with the restoration feature.
@@ -82,10 +83,6 @@ function Projects() {
                     <li>Enjoy a seamless experience across all devices.</li>
                     <li>
                       Switch between light and dark modes as per preference.
-                    </li>
-                    <li>
-                      Interact with Alice, the chat assistant, for instant
-                      support and guidance.
                     </li>
                   </ul>
                 </>
@@ -135,9 +132,6 @@ function Projects() {
                     Improved overall workflow and communication by proposing
                     developers join business meetings
                   </ul>
-                  <br />
-                  <br />
-                  <br />
                 </>
               }
               tools="React • Bootstrap • TypeScript • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
