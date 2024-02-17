@@ -19,6 +19,7 @@ import twitter from "../../Assets/Projects/twitter.png";
 import techpulse from "../../Assets/Projects/techpulse.png";
 import voith from "../../Assets/Projects/voith.webp";
 import dashboard from "../../Assets/Projects/nextjs-dashboard.png";
+import ai2 from "../../Assets/Projects/ai2.png";
 
 function Projects() {
   return (
@@ -33,6 +34,66 @@ function Projects() {
           <strong className="purple">Current Job</strong>
         </h2> */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: "left" }}
+              imgPath={ai2}
+              isBlog={false}
+              title="Reba AI"
+              description={
+                <>
+                  <ul>
+                    <li>
+                      Secure access with robust registration, login, and route
+                      protection.
+                    </li>
+                    <li>
+                      Explore community transformations with user-friendly
+                      pagination.
+                    </li>
+                    <li>
+                      Find images quickly with advanced search by content or
+                      objects.
+                    </li>
+                    <li>
+                      Generate new images with text prompts using AI creativity.
+                    </li>
+                    <li>
+                      Revive old or damaged images with the restoration feature.
+                    </li>
+                    <li>
+                      Customize images by replacing objects with desired colors.
+                    </li>
+                    <li>Fill in missing areas of images seamlessly.</li>
+                    <li>Remove unwanted objects with precision.</li>
+                    <li>Extract objects from backgrounds easily.</li>
+                    <li>
+                      Download and share AI-transformed images conveniently.
+                    </li>
+                    <li>View details of each transformation process.</li>
+                    <li>
+                      Manage transformations with options to delete and update.
+                    </li>
+                    <li>Use credits to access image transformations.</li>
+                    <li>
+                      Access transformed images and credits on the profile page.
+                    </li>
+                    <li>Buy credits securely via Stripe.</li>
+                    <li>Enjoy a seamless experience across all devices.</li>
+                    <li>
+                      Switch between light and dark modes as per preference.
+                    </li>
+                    <li>
+                      Interact with Alice, the chat assistant, for instant
+                      support and guidance.
+                    </li>
+                  </ul>
+                </>
+              }
+              tools="Next.js • MongoDB • TypeScript • Dall-E • GPT-4 • TailwindCSS • Clerk • Cloudinary • Stripe • Shadcn "
+              // link="https://voith.com/corp-en/services/servolution/voith-paper-webshop.html"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               style={{ textAlign: "left" }}
@@ -74,41 +135,23 @@ function Projects() {
                     Improved overall workflow and communication by proposing
                     developers join business meetings
                   </ul>
+                  <br />
+                  <br />
+                  <br />
                 </>
               }
               tools="React • Bootstrap • TypeScript • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
-              link="https://voith.com/corp-en/services/servolution/voith-paper-webshop.html"
+              link="https://vpwebshop.apps.cloud.voith.com/"
             />
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              style={{ textAlign: "left" }}
-              imgPath={techpulse}
-              isBlog={false}
-              title="HP TechPulse"
-              description={
-                <>
-                  <p>
-                    HP TechPulse is a cloud-based telemetry and analytics
-                    platform that aggregates critical data from devices and
-                    applications, putting deep insights at IT’s fingertips to
-                    predict and resolve device issues before they impact
-                    employees.
-                  </p>
-                </>
-              }
-              tools="React • react-i18next • JavaScript • HTML • CSS • Highcharts "
-              link="https://www.hp.com/us-en/services/techpulse.html"
-            />
-          </Col>
-          <p style={{ color: "white" }}>
+          {/* <p style={{ color: "white" }}>
             Here are a few personal projects I've worked on recently:
-          </p>{" "}
-          <h2 className="project-category">
+          </p>{" "} */}
+          {/* <h2 className="project-category">
             <strong className="purple">Full-stack </strong>
-          </h2>
+          </h2> */}
         </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
@@ -190,9 +233,9 @@ function Projects() {
             />
           </Col>
         </Row>
-        <h2>
+        {/* <h2>
           <strong className="purple">React JS</strong>
-        </h2>
+        </h2> */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -214,13 +257,42 @@ function Projects() {
               link="https://fast-typing-game-123.netlify.app/"
             />
           </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={notes}
+              isBlog={false}
+              title="Notes"
+              description={
+                <>
+                  "Notes app."
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </>
+              }
+              tools="React • JavaScript • HTML • CSS"
+              link="https://notes-123.netlify.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={photoshop}
               isBlog={false}
               title="E-Photo"
               // description="Demo version of photo e-commerce"
-              description="Fully responsive Single Page App. Demo version of e-commerce website where user can add pictures to favorite, to a cart and then choose the size and send an order."
+
+              description={
+                <>
+                  Fully responsive Single Page App. Demo version of e-commerce
+                  website where user can add pictures to favorite, to a cart and
+                  then choose the size and send an order.
+                  <br />
+                  <br />
+                  <br />
+                </>
+              }
               // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
               tools="React • JavaScript • HTML • CSS"
               link="https://ephoto-123.netlify.app/"
@@ -228,27 +300,48 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={notes}
-              isBlog={false}
-              title="Notes"
-              description="Notes app."
-              tools="React • JavaScript • HTML • CSS"
-              link="https://notes-123.netlify.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={memes}
               isBlog={false}
               title="Memes Generator"
-              description="Elon Musk would be delighted!"
+              description={
+                <>
+                  "Elon Musk would be delighted!"
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </>
+              }
               tools="React • JavaScript • REST API • HTML • CSS"
               link="https://meme-generator-123.netlify.app/"
             />
           </Col>
-          <h2>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              style={{ textAlign: "left" }}
+              imgPath={techpulse}
+              isBlog={false}
+              title="HP TechPulse"
+              description={
+                <>
+                  <p>
+                    HP TechPulse is a cloud-based telemetry and analytics
+                    platform that aggregates critical data from devices and
+                    applications, putting deep insights at IT’s fingertips to
+                    predict and resolve device issues before they impact
+                    employees.
+                  </p>
+                </>
+              }
+              tools="React • react-i18next • JavaScript • HTML • CSS • Highcharts "
+              link="https://www.hp.com/us-en/services/techpulse.html"
+            />
+          </Col>
+          {/* <h2>
             <strong className="purple">Vanilla JavaScript </strong>
-          </h2>
+          </h2> */}
           <Col md={4} className="project-card">
             <ProjectCard
               style={{ textAlign: "center" }}
