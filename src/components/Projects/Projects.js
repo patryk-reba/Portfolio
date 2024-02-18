@@ -196,7 +196,7 @@ function Projects() {
                 </ul>
               }
               tools="React • Typescript • Next.js • JavaScript • HTML • Tailwind CSS • Sanity CMS"
-              // link="https://clone-f512b.firebaseapp.com/"
+              link="https://clone-f512b.firebaseapp.com/"
             />
           </Col>
           <Col md={4} className="project-card">
