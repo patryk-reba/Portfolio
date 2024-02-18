@@ -87,7 +87,7 @@ function Projects() {
                   </ul>
                 </>
               }
-              tools="Next.js • MongoDB • TypeScript • Dall-E • GPT-4 • TailwindCSS • Clerk • Cloudinary • Stripe • Shadcn "
+              tools="Next.js • MongoDB • TypeScript • Dall-E • GPT-4 • TailwindCSS • Clerk • Cloudinary • Stripe • Shadcn • React Hook Form"
               // link="https://voith.com/corp-en/services/servolution/voith-paper-webshop.html"
             />
           </Col>
@@ -134,7 +134,7 @@ function Projects() {
                   </ul>
                 </>
               }
-              tools="React • Bootstrap • TypeScript • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
+              tools="React • Bootstrap • TypeScript • NestJS • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
               link="https://vpwebshop.apps.cloud.voith.com/"
             />
           </Col>
