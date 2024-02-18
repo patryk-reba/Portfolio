@@ -88,7 +88,7 @@ function Projects() {
                 </>
               }
               tools="Next.js • MongoDB • TypeScript • Dall-E • GPT-4 • TailwindCSS • Clerk • Cloudinary • Stripe • Shadcn • React Hook Form"
-              // link="https://voith.com/corp-en/services/servolution/voith-paper-webshop.html"
+              link="https://reba-ai.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -132,6 +132,7 @@ function Projects() {
                     Improved overall workflow and communication by proposing
                     developers join business meetings
                   </ul>
+                  <br />
                 </>
               }
               tools="React • Bootstrap • TypeScript • NestJS • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
