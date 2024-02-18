@@ -23,14 +23,7 @@ function Home2() {
             </h1>
             <p className="home-about-body">
               Self-taught programmer, passionate about building things with
-              React JS🏗️ Also owner of{" "}
-              <a
-                href="https://climbium.pl"
-                target="_blank"
-                style={{ textDecoration: "none", color: "" }}
-              >
-                <b className="purple">CLIMBIUM Patryk Reba.</b>
-              </a>
+              React JS🏗️
               <br />
               {/* <br />I am fluent in classics like
               <i>
@@ -39,7 +32,8 @@ function Home2() {
               <br /> */}
               <br />
               My field of interest is building new &nbsp;
-              <b className="purple">Web Apps and Products, </b> especially related to
+              <b className="purple">Web Apps and Products, </b> especially
+              related to
               <b className="purple"> AI.</b>
               <br />
               <br />
