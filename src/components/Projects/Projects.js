@@ -130,9 +130,9 @@ function Projects() {
                     </li>
                     Integrated analytics tool to track events on the website.
                     Improved overall workflow and communication by proposing
-                    developers join business meetings
+                    developers join business meetings.
+                    <li>Hire senior developers</li>
                   </ul>
-                  <br />
                 </>
               }
               tools="React • Bootstrap • TypeScript • NestJS • Bootstrap • Tailwind CSS • Redux • Web Components • Formik • Storybook • JEST • React testing library • JSDOCS"
