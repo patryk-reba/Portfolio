@@ -189,10 +189,6 @@ function Projects() {
                   <li>Next.js</li>
                   <li>Sanity CMS</li>
                   <li> Tailwind CSS</li>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
                 </ul>
               }
               tools="React • Typescript • Next.js • JavaScript • HTML • Tailwind CSS • Sanity CMS"
@@ -219,8 +215,6 @@ function Projects() {
                   </li>
                   <li>PostgreSQL database</li>
                   <li> Tailwind CSS</li>
-                  <br></br>
-                  <br></br>
                 </ul>
               }
               tools="React • Typescript • Next.js • JavaScript • HTML • Tailwind CSS • Sanity CMS"
@@ -258,15 +252,7 @@ function Projects() {
               imgPath={notes}
               isBlog={false}
               title="Notes"
-              description={
-                <>
-                  "Notes app."
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                </>
-              }
+              description={<>"Notes app."</>}
               tools="React • JavaScript • HTML • CSS"
               link="https://notes-123.netlify.app/"
             />
@@ -283,9 +269,6 @@ function Projects() {
                   Fully responsive Single Page App. Demo version of e-commerce
                   website where user can add pictures to favorite, to a cart and
                   then choose the size and send an order.
-                  <br />
-                  <br />
-                  <br />
                 </>
               }
               // Built with React (Router, useState, useEffect, useContext, react-icons, forms)
@@ -298,17 +281,7 @@ function Projects() {
               imgPath={memes}
               isBlog={false}
               title="Memes Generator"
-              description={
-                <>
-                  Elon Musk would be delighted!
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                </>
-              }
+              description={<>Elon Musk would be delighted!</>}
               tools="React • JavaScript • REST API • HTML • CSS"
               link="https://meme-generator-123.netlify.app/"
             />
@@ -380,7 +353,7 @@ function Projects() {
                 isBlog={false}
                 title="CLIMBIUM"
                 description="Website I built for my e-commerce business"
-                // tools="WordPress • WooCommerce • Elementor • HTML • CSS"
+                tools="WordPress • WooCommerce • Elementor • HTML • CSS"
                 link="https://climbium.pl/"
               />
             </Col>
@@ -390,7 +363,7 @@ function Projects() {
                 isBlog={false}
                 title="INST-ECO"
                 description="Business website I've made for INST-ECO company. "
-                // tools="WordPress • Elementor • HTML • CSS"
+                tools="WordPress • Elementor • HTML • CSS"
                 link="http://insteco.pl/"
               />
             </Col>
@@ -400,7 +373,7 @@ function Projects() {
                 isBlog={false}
                 title="My travels"
                 description="Website with pictures and videos I've made during one year of backpacking."
-                // tools="WordPress • Elementor • HTML • CSS"
+                tools="WordPress • Elementor • HTML • CSS"
                 link="http://reba95.webd.pro/podrozeksztalca.pl/"
               />
             </Col>

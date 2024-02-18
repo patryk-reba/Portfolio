@@ -48,7 +48,7 @@ function Home2() {
               &nbsp; like */}
               {/* <b className="purple"> React.js and Next.js. </b> */}
               Check out my{" "}
-              <Link to="/project" style={{ textDecoration: "none" }}>
+              <Link to="/portfolio" style={{ textDecoration: "none" }}>
                 <b className="purple">Portfolio</b>
               </Link>{" "}
               to see projects I've worked on and{" "}
