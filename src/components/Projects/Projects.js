@@ -300,7 +300,7 @@ function Projects() {
               title="Memes Generator"
               description={
                 <>
-                  "Elon Musk would be delighted!"
+                  Elon Musk would be delighted!
                   <br />
                   <br />
                   <br />
