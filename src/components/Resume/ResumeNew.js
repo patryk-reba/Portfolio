@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/patryk_reba.pdf";
 import cv from "../../Assets/../Assets/cv.png";
+import cv2 from "../../Assets/../Assets/cv2.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -38,6 +39,13 @@ function ResumeNew() {
 
         <Row className="resume">
           <img src={cv} style={{ width: "60%", maxWidth: "700px" }} />
+
+          {/* <Document file={resumeLink} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </Document> */}
+          <img src={cv2} style={{ width: "60%", maxWidth: "700px" }} />
+        </Row>
+        <Row className="resume">
           {/* <Document file={resumeLink} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document> */}

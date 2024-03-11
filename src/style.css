@@ -786,7 +786,7 @@ button:focus {
   font-size: 0.9em;
   background: #5234795d;
   padding: 8px 15px;
-  display: inline-block;
+  /* display: inline-block; */
   font-weight: 600;
   margin-bottom: 10px;
 }
