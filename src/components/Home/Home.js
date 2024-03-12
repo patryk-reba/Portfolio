@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/Me-black-white3.png";
+import myImg from "../../Assets/me-new.png";
 import Tilt from "react-parallax-tilt";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -43,7 +43,7 @@ function Home() {
                   src={myImg}
                   className="img-fluid"
                   alt="avatar"
-                  style={{ borderRadius: "100%", maxHeight: "450px" }}
+                  style={{ borderRadius: "30%", maxHeight: "450px" }}
                 />
               </Tilt>
             </Col>
