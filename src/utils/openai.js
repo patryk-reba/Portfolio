@@ -104,16 +104,9 @@ Polish Native
       stream: true,
     });
 
-    let fullResponse = "";
-    for await (const chunk of response) {
-      fullResponse += chunk.choices[0]?.delta?.content || "";
-    }
-
-    return { output: fullResponse };
+    return response;
   } catch (error) {
     console.error("Error calling OpenAI API:", error);
-    return {
-      output: "I'm sorry, I encountered an error. Please try again later.",
-    };
+    throw error;
   }
 }

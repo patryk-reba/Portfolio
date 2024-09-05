@@ -18,6 +18,7 @@ function AIChat() {
   const [showHint, setShowHint] = useState(true);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
   const messagesEndRef = useRef(null);
   const chatWindowRef = useRef(null);
   const shouldScrollRef = useRef(true);
@@ -105,12 +106,36 @@ function AIChat() {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
 
-    const { output } = await streamMessage([...messages, userMessage]);
-    const assistantMessage = { role: "assistant", content: output };
-    setMessages([...messages, userMessage, assistantMessage]);
+    try {
+      setIsStreaming(true);
+      const stream = await streamMessage([...messages, userMessage]);
 
-    if (isVoiceInput) {
-      speakMessage(output);
+      let assistantMessage = { role: "assistant", content: "" };
+      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+
+      for await (const chunk of stream) {
+        const content = chunk.choices[0]?.delta?.content || "";
+        assistantMessage.content += content;
+        setMessages((prevMessages) => [
+          ...prevMessages.slice(0, -1),
+          { ...assistantMessage },
+        ]);
+      }
+
+      if (isVoiceInput) {
+        speakMessage(assistantMessage.content);
+      }
+    } catch (error) {
+      console.error("Error streaming message:", error);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        {
+          role: "assistant",
+          content: "I'm sorry, I encountered an error. Please try again later.",
+        },
+      ]);
+    } finally {
+      setIsStreaming(false);
     }
   };
 
@@ -141,7 +166,7 @@ function AIChat() {
             {messages.map((message, index) => (
               <div key={index} className={`message ${message.role}`}>
                 {message.content}
-                {message.role === "assistant" && (
+                {message.role === "assistant" && !isStreaming && (
                   <button
                     className="speak-button"
                     onClick={() => speakMessage(message.content)}
@@ -153,6 +178,9 @@ function AIChat() {
                 )}
               </div>
             ))}
+            {isStreaming && (
+              <div className="message assistant streaming">...</div>
+            )}
           </div>
           <form
             onSubmit={(e) => handleSubmit(e, null, false)}
