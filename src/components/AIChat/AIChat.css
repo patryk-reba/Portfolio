@@ -14,7 +14,6 @@
   height: 60px;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   position: relative; /* Add this line */
   z-index: 1; /* Add this line */
@@ -45,7 +44,7 @@
   bottom: 70px;
   right: 0;
   max-width: 450px;
-  width: 94vw;
+  width: 90vw;
   height: 500px;
   background-color: rgba(
     40,
@@ -134,19 +133,16 @@ form button:hover {
 
 .speak-button {
   position: absolute;
-  right: 5px;
   bottom: 5px;
+  right: 5px;
   background: none;
   border: none;
-  color: #ffffff;
   cursor: pointer;
-  font-size: 14px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  color: #666;
 }
 
 .speak-button:hover {
-  opacity: 1;
+  color: #333;
 }
 
 .voice-input-button {
@@ -170,4 +166,72 @@ form button:hover {
     filter: blur(5px);
     opacity: 0.7;
   }
+}
+
+@keyframes chatWindowGlow {
+  0% {
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+  }
+  50% {
+    box-shadow: 0 5px 30px rgba(138, 43, 226, 0.7);
+  }
+  100% {
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+  }
+}
+
+.chat-window-glow {
+  animation: chatWindowGlow 2s ease-in-out;
+}
+
+/* Add this media query at the end of the file */
+@media screen and (max-width: 480px) {
+  .chat-window {
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: calc(
+      100vh - 80px
+    ); /* Adjust height to leave space for the toggle button */
+    border-radius: 0;
+  }
+
+  .ai-chat {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.message-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.message-content {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.assistant .message-content {
+  background-color: #f0f0f0;
+}
+
+.user .message-content {
+  background-color: #e6f2ff;
+  text-align: right;
+}
+
+.speak-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.speak-button:hover {
+  color: #333;
 }

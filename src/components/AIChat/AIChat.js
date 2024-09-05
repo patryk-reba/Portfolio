@@ -26,6 +26,7 @@ function AIChat() {
   const chatWindowRef = useRef(null);
   const shouldScrollRef = useRef(true);
   const audioRef = useRef(new Audio());
+  const [isGlowing, setIsGlowing] = useState(false);
 
   const scrollToBottom = () => {
     if (chatWindowRef.current) {
@@ -153,6 +154,7 @@ function AIChat() {
       setMessages((prevMessages) => [...prevMessages, assistantMessage]);
 
       setAudioReady((prev) => ({ ...prev, [assistantMessage.id]: false }));
+      setIsGlowing(true);
 
       for await (const chunk of stream) {
         const content = chunk.choices[0]?.delta?.content || "";
@@ -169,6 +171,11 @@ function AIChat() {
 
       // Generate audio for the complete message
       generateAudio(assistantMessage.content, assistantMessage.id);
+
+      // Set a timeout to remove the glowing effect
+      setTimeout(() => {
+        setIsGlowing(false);
+      }, 2000);
     } catch (error) {
       console.error("Error streaming message:", error);
       setMessages((prevMessages) => [
@@ -202,7 +209,7 @@ function AIChat() {
       </button>
       {showHint && !isOpen && <ChatHint />}
       {isOpen && (
-        <div className="chat-window">
+        <div className={`chat-window ${isGlowing ? "chat-window-glow" : ""}`}>
           <div
             className="chat-messages"
             ref={chatWindowRef}
