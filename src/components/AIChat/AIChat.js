@@ -29,7 +29,7 @@ function AIChat() {
   const audioRef = useRef(new Audio());
   const [isGlowing, setIsGlowing] = useState(false);
   const [suggestedQuestions, setSuggestedQuestions] = useState([
-    "What is Patryk's experience with React?",
+    "What is Patryk's experience with AI?",
     "How many years of experience does Patryk have?",
     "What languages does Patryk speak?",
     "What is Patryk's notice period?",
