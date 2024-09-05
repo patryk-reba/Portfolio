@@ -51,12 +51,44 @@ function AIChat() {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const loadVoices = () => {
+      window.speechSynthesis.getVoices();
+    };
+
+    loadVoices();
+
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+  }, []);
+
   const speakMessage = (text) => {
     if (isSpeaking) {
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
     } else {
       const utterance = new SpeechSynthesisUtterance(text);
+
+      // Get available voices
+      const voices = window.speechSynthesis.getVoices();
+
+      // Choose a more natural-sounding voice (you may need to adjust this based on available voices)
+      const naturalVoice = voices.find(
+        (voice) =>
+          voice.name.includes("Google") ||
+          voice.name.includes("Natural") ||
+          voice.name.includes("Samantha")
+      );
+
+      if (naturalVoice) {
+        utterance.voice = naturalVoice;
+      }
+
+      // Adjust speech parameters for a more natural sound
+      utterance.rate = 0.9; // Slightly slower rate
+      utterance.pitch = 1.1; // Slightly higher pitch
+
       utterance.onend = () => setIsSpeaking(false);
       utterance.onerror = () => setIsSpeaking(false);
       setIsSpeaking(true);
@@ -122,9 +154,10 @@ function AIChat() {
         ]);
       }
 
-      if (isVoiceInput) {
-        speakMessage(assistantMessage.content);
-      }
+      // Remove the automatic speech synthesis for voice input
+      // if (isVoiceInput) {
+      //   speakMessage(assistantMessage.content);
+      // }
     } catch (error) {
       console.error("Error streaming message:", error);
       setMessages((prevMessages) => [
