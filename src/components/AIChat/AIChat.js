@@ -145,26 +145,30 @@ function AIChat() {
       setIsStreaming(true);
       const stream = await streamMessage([...messages, userMessage]);
 
-      let assistantMessage = { role: "assistant", content: "" };
-      const messageId = Date.now().toString();
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { ...assistantMessage, id: messageId },
-      ]);
-      setAudioReady((prev) => ({ ...prev, [messageId]: false }));
+      let assistantMessage = {
+        role: "assistant",
+        content: "",
+        id: Date.now().toString(),
+      };
+      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+
+      setAudioReady((prev) => ({ ...prev, [assistantMessage.id]: false }));
 
       for await (const chunk of stream) {
         const content = chunk.choices[0]?.delta?.content || "";
         assistantMessage.content += content;
-        setMessages((prevMessages) => [
-          ...prevMessages.slice(0, -1),
-          { ...assistantMessage, id: messageId },
-        ]);
-        scrollToBottom(); // Add this line to scroll after each update
+        setMessages((prevMessages) =>
+          prevMessages.map((msg) =>
+            msg.id === assistantMessage.id
+              ? { ...msg, content: assistantMessage.content }
+              : msg
+          )
+        );
+        scrollToBottom();
       }
 
       // Generate audio for the complete message
-      generateAudio(assistantMessage.content, messageId);
+      generateAudio(assistantMessage.content, assistantMessage.id);
     } catch (error) {
       console.error("Error streaming message:", error);
       setMessages((prevMessages) => [
@@ -176,7 +180,7 @@ function AIChat() {
       ]);
     } finally {
       setIsStreaming(false);
-      scrollToBottom(); // Add this line to ensure scrolling after streaming is complete
+      scrollToBottom();
     }
   };
 
@@ -224,9 +228,7 @@ function AIChat() {
                   )}
               </div>
             ))}
-            {isStreaming && (
-              <div className="message assistant streaming">...</div>
-            )}
+            {isStreaming && <span className="streaming-indicator">✨</span>}
           </div>
           <form
             onSubmit={(e) => handleSubmit(e, null, false)}
