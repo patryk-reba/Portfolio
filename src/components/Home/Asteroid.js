@@ -116,15 +116,15 @@ function Rocket() {
   useEffect(() => {
     const launchTimer = setTimeout(() => {
       setLaunch(true);
-    }, 5000);
+    }, 3000); // Launch after 3 seconds
 
     const speechBubbleTimer = setTimeout(() => {
       setShowSpeechBubble(true);
-    }, 6000); // Show speech bubble 1 second after launch
+    }, 4000); // Show speech bubble 1 second after launch
 
     const hideSpeechBubbleTimer = setTimeout(() => {
       setShowSpeechBubble(false);
-    }, 11000); // Hide speech bubble after 5 seconds
+    }, 14000); // Hide speech bubble after 10 seconds
 
     return () => {
       clearTimeout(launchTimer);
