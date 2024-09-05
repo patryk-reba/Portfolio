@@ -112,36 +112,40 @@ function Asteroid({ angle, onExplode, initialSize }) {
 function Rocket() {
   const [launch, setLaunch] = useState(false);
   const [showSpeechBubble, setShowSpeechBubble] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const launchTimer = setTimeout(() => {
       setLaunch(true);
-    }, 3000); // Launch after 3 seconds
+    }, 3000);
 
     const speechBubbleTimer = setTimeout(() => {
       setShowSpeechBubble(true);
-    }, 4000); // Show speech bubble 1 second after launch
-
-    const hideSpeechBubbleTimer = setTimeout(() => {
-      setShowSpeechBubble(false);
-    }, 14000); // Hide speech bubble after 10 seconds
+    }, 4000);
 
     return () => {
       clearTimeout(launchTimer);
       clearTimeout(speechBubbleTimer);
-      clearTimeout(hideSpeechBubbleTimer);
+      window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
   return (
     <div
       className="rocket-container"
-      style={{ bottom: launch ? "110%" : "-100px" }}
+      style={{ bottom: launch ? "110%" : "0px" }}
     >
       <div className="rocket">🚀</div>
-      {showSpeechBubble && (
+      {showSpeechBubble && !isMobile && (
         <div className="speech-bubble">
-          Help me! Destroy asteroids by clicking on them!
+          Help me destroy asteroids by clicking on them!
         </div>
       )}
     </div>
