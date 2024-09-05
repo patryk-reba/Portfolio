@@ -189,10 +189,9 @@ form button:hover {
 @media screen and (max-width: 480px) {
   .chat-window {
     width: 94vw; /* Full viewport width */
-    height: 50vh; /* Full viewport height */
+    height: 60vh; /* Full viewport height */
     right: 10px;
 
-    border-radius: 0;
     max-width: none; /* Remove max-width constraint */
   }
 
