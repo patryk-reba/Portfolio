@@ -11,7 +11,7 @@ const ChatHint = () => {
 
   return isVisible ? (
     <div className="chat-hint">
-      <p>Chat with AI about Patryk here!</p>
+      <p>Chat with AI about me here!</p>
     </div>
   ) : null;
 };
