@@ -18,6 +18,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AIChat from "./components/AIChat/AIChat";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -36,11 +38,9 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-
         {/* <Home />
         <About />
         <Projects /> */}
-
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -50,8 +50,8 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-
         <Footer />
+        <AIChat /> {/* Add this line */}
       </div>
     </HashRouter>
   );
