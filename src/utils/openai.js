@@ -110,3 +110,21 @@ Polish Native
     throw error;
   }
 }
+
+export async function textToSpeech(text) {
+  try {
+    const response = await openai.audio.speech.create({
+      model: "tts-1",
+      voice: "alloy",
+      input: text,
+    });
+
+    const arrayBuffer = await response.arrayBuffer();
+    const blob = new Blob([arrayBuffer], { type: "audio/mpeg" });
+    const url = URL.createObjectURL(blob);
+    return url;
+  } catch (error) {
+    console.error("Error calling OpenAI TTS API:", error);
+    throw error;
+  }
+}

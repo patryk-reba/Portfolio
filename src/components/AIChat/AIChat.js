@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { streamMessage } from "../../utils/openai";
+import { streamMessage, textToSpeech } from "../../utils/openai";
 import "./AIChat.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,12 +19,16 @@ function AIChat() {
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
+  const [audioUrl, setAudioUrl] = useState(null);
+  const [audioCache, setAudioCache] = useState({});
+  const [audioReady, setAudioReady] = useState({});
   const messagesEndRef = useRef(null);
   const chatWindowRef = useRef(null);
   const shouldScrollRef = useRef(true);
+  const audioRef = useRef(new Audio());
 
   const scrollToBottom = () => {
-    if (chatWindowRef.current && shouldScrollRef.current) {
+    if (chatWindowRef.current) {
       chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
     }
   };
@@ -63,36 +67,35 @@ function AIChat() {
     }
   }, []);
 
-  const speakMessage = (text) => {
+  const generateAudio = async (text, messageId) => {
+    try {
+      const url = await textToSpeech(text);
+      setAudioCache((prev) => ({ ...prev, [messageId]: url }));
+      setAudioReady((prev) => ({ ...prev, [messageId]: true }));
+    } catch (error) {
+      console.error("Error in text-to-speech:", error);
+      setAudioReady((prev) => ({ ...prev, [messageId]: false }));
+    }
+  };
+
+  const speakMessage = (text, messageId) => {
     if (isSpeaking) {
-      window.speechSynthesis.cancel();
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
       setIsSpeaking(false);
     } else {
-      const utterance = new SpeechSynthesisUtterance(text);
-
-      // Get available voices
-      const voices = window.speechSynthesis.getVoices();
-
-      // Choose a more natural-sounding voice (you may need to adjust this based on available voices)
-      const naturalVoice = voices.find(
-        (voice) =>
-          voice.name.includes("Google") ||
-          voice.name.includes("Natural") ||
-          voice.name.includes("Samantha")
-      );
-
-      if (naturalVoice) {
-        utterance.voice = naturalVoice;
-      }
-
-      // Adjust speech parameters for a more natural sound
-      utterance.rate = 0.9; // Slightly slower rate
-      utterance.pitch = 1.1; // Slightly higher pitch
-
-      utterance.onend = () => setIsSpeaking(false);
-      utterance.onerror = () => setIsSpeaking(false);
       setIsSpeaking(true);
-      window.speechSynthesis.speak(utterance);
+      const url = audioCache[messageId];
+      if (url) {
+        audioRef.current.src = url;
+        audioRef.current.play();
+        audioRef.current.onended = () => {
+          setIsSpeaking(false);
+        };
+      } else {
+        console.error("Audio not ready yet");
+        setIsSpeaking(false);
+      }
     }
   };
 
@@ -143,21 +146,25 @@ function AIChat() {
       const stream = await streamMessage([...messages, userMessage]);
 
       let assistantMessage = { role: "assistant", content: "" };
-      setMessages((prevMessages) => [...prevMessages, assistantMessage]);
+      const messageId = Date.now().toString();
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { ...assistantMessage, id: messageId },
+      ]);
+      setAudioReady((prev) => ({ ...prev, [messageId]: false }));
 
       for await (const chunk of stream) {
         const content = chunk.choices[0]?.delta?.content || "";
         assistantMessage.content += content;
         setMessages((prevMessages) => [
           ...prevMessages.slice(0, -1),
-          { ...assistantMessage },
+          { ...assistantMessage, id: messageId },
         ]);
+        scrollToBottom(); // Add this line to scroll after each update
       }
 
-      // Remove the automatic speech synthesis for voice input
-      // if (isVoiceInput) {
-      //   speakMessage(assistantMessage.content);
-      // }
+      // Generate audio for the complete message
+      generateAudio(assistantMessage.content, messageId);
     } catch (error) {
       console.error("Error streaming message:", error);
       setMessages((prevMessages) => [
@@ -169,6 +176,7 @@ function AIChat() {
       ]);
     } finally {
       setIsStreaming(false);
+      scrollToBottom(); // Add this line to ensure scrolling after streaming is complete
     }
   };
 
@@ -197,18 +205,23 @@ function AIChat() {
             onScroll={handleScroll}
           >
             {messages.map((message, index) => (
-              <div key={index} className={`message ${message.role}`}>
+              <div
+                key={message.id || index}
+                className={`message ${message.role}`}
+              >
                 {message.content}
-                {message.role === "assistant" && !isStreaming && (
-                  <button
-                    className="speak-button"
-                    onClick={() => speakMessage(message.content)}
-                  >
-                    <FontAwesomeIcon
-                      icon={isSpeaking ? faVolumeMute : faVolumeUp}
-                    />
-                  </button>
-                )}
+                {message.role === "assistant" &&
+                  !isStreaming &&
+                  audioReady[message.id] && (
+                    <button
+                      className="speak-button"
+                      onClick={() => speakMessage(message.content, message.id)}
+                    >
+                      <FontAwesomeIcon
+                        icon={isSpeaking ? faVolumeMute : faVolumeUp}
+                      />
+                    </button>
+                  )}
               </div>
             ))}
             {isStreaming && (
