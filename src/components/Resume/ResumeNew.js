@@ -38,12 +38,22 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          <img src={cv} style={{ width: "60%", maxWidth: "700px" }} />
-
-          {/* <Document file={resumeLink} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document> */}
-          <img src={cv2} style={{ width: "60%", maxWidth: "700px" }} />
+          <img
+            src={cv}
+            style={{
+              width: "60%",
+              maxWidth: "700px",
+              opacity: 0.7, // Add this line for transparency
+            }}
+          />
+          <img
+            src={cv2}
+            style={{
+              width: "60%",
+              maxWidth: "700px",
+              opacity: 0.7, // Add this line for transparency
+            }}
+          />
         </Row>
         <Row className="resume">
           {/* <Document file={resumeLink} className="d-flex justify-content-center">
