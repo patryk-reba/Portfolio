@@ -1,0 +1,118 @@
+.asteroid-wrapper {
+  position: fixed;
+  transition: all 15s linear;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.asteroid {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #4a4a4a, #2c2c2c);
+  border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%;
+  position: relative;
+  transform: rotate(-20deg);
+  overflow: hidden;
+  box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.asteroid::before,
+.asteroid::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.asteroid::before {
+  width: 30%;
+  height: 30%;
+  top: 20%;
+  left: 15%;
+}
+
+.asteroid::after {
+  width: 25%;
+  height: 25%;
+  bottom: 25%;
+  right: 20%;
+}
+
+.crater {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.rocket {
+  position: fixed;
+  bottom: -100px;
+  left: 20%;
+  transform: translateX(-50%) rotate(-45deg);
+  font-size: 60px;
+  transition: bottom 20s linear;
+  z-index: 1;
+}
+
+.exploding .asteroid {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.particle,
+.flame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, #ff6b00, #ff0000);
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+.flame {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 0 50% 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  filter: blur(5px);
+  animation: flicker 0.5s ease-out infinite alternate,
+    explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.9);
+  }
+}
+
+/* Remove all fire-related styles */

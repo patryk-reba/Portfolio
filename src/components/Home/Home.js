@@ -7,6 +7,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { HashLink } from "react-router-hash-link";
+import AsteroidField from "./Asteroid";
 
 function Home() {
   return (
@@ -55,6 +56,7 @@ function Home() {
           </Row>
         </Container>
         <Home2 />
+        <AsteroidField />
       </Container>
     </section>
   );
