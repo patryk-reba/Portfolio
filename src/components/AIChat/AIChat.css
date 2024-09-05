@@ -27,7 +27,7 @@
   position: absolute;
   bottom: 70px;
   right: 0;
-  width: 400px;
+  width: 450px;
   height: 500px;
   background-color: #282c34;
   border-radius: 10px;
@@ -50,7 +50,8 @@
   border-radius: 18px;
   max-width: 80%;
   word-wrap: break-word;
-  text-align: left; /* Add this line to align text to the left */
+  text-align: left;
+  display: inline-block; /* Add this line */
 }
 
 .user {
@@ -58,12 +59,17 @@
   color: white;
   align-self: flex-end;
   margin-left: auto;
+  text-align: right;
+  float: right; /* Add this line */
+  clear: both; /* Add this line */
 }
 
 .assistant {
   background-color: #3a3f4b;
   color: white;
   align-self: flex-start;
+  float: left; /* Add this line */
+  clear: both; /* Add this line */
 }
 
 form {
@@ -118,4 +124,12 @@ form button:hover {
 
 .speak-button:hover {
   opacity: 1;
+}
+
+.voice-input-button {
+  margin-right: 10px; /* Adjust this value to increase or decrease the gap */
+}
+
+.chat-input {
+  flex-grow: 1;
 }

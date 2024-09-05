@@ -29,7 +29,7 @@ Work Experience:
 Zeta Labs, Jace.ai (04.2024 - 06.2024)
 Senior Frontend Engineer
 
-
+Building Next.js app with Tailwind CSS, zustand, clerk, stripe.
 Worked on cutting-edge web agent app with ex-Meta and ex-Google engineers
 Designed UI/UX in Figma
 Developed responsive mobile UI with features like settings, navigation, file attachments
