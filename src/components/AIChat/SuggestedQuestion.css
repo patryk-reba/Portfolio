@@ -1,0 +1,29 @@
+.suggested-questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-left: 1rem; /* Add left margin */
+}
+
+.suggested-question {
+  background-color: #8a2be2;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 16px;
+  margin: 4px 4px 4px 0; /* Adjust margin */
+  font-size: 14px;
+  color: #ffffff; /* Change text color for better contrast */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.suggested-questions p {
+  margin-bottom: 0px;
+  color: #9370db;
+  font-weight: bold;
+}
+
+.suggested-question:hover {
+  background-color: #9d4de6; /* Adjust hover color for better contrast */
+}

@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ChatHint from "./ChatHint";
 import { useLayoutEffect } from "react";
+import SuggestedQuestion from "./SuggestedQuestion"; // We'll create this component
 
 function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,12 @@ function AIChat() {
   const shouldScrollRef = useRef(true);
   const audioRef = useRef(new Audio());
   const [isGlowing, setIsGlowing] = useState(false);
+  const [suggestedQuestions, setSuggestedQuestions] = useState([
+    "What is Patryk's experience with React?",
+    "How many years of experience does Patryk have?",
+    "What languages does Patryk speak?",
+    "What is Patryk's notice period?",
+  ]);
 
   const scrollToBottom = () => {
     if (chatWindowRef.current) {
@@ -202,6 +209,10 @@ function AIChat() {
     shouldScrollRef.current = chatWindowRef.current.scrollTop === 0;
   };
 
+  const handleSuggestedQuestionClick = (question) => {
+    handleSubmit(null, question);
+  };
+
   return (
     <div className="ai-chat">
       <button className="chat-toggle" onClick={handleToggleChat}>
@@ -238,6 +249,21 @@ function AIChat() {
             ))}
             {isStreaming && <span className="streaming-indicator">✨</span>}
           </div>
+
+          {/* Add suggested questions at the bottom */}
+          {messages.length === 1 && (
+            <div className="suggested-questions">
+              <p>Suggested questions:</p>
+              {suggestedQuestions.map((question, index) => (
+                <SuggestedQuestion
+                  key={index}
+                  question={question}
+                  onClick={() => handleSuggestedQuestionClick(question)}
+                />
+              ))}
+            </div>
+          )}
+
           <form
             onSubmit={(e) => handleSubmit(e, null, false)}
             className="chat-input-form"

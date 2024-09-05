@@ -22,7 +22,7 @@ export async function streamMessage(messages) {
           role: "system",
           content: `You are an AI assistant designed to answer questions about Patryk Reba based on these informations:
             
-            Patryk Reba - Frontend Engineer. 29 years old.
+            Patryk Reba - Frontend Engineer. 29 years old. He has 1 month notice period. 
 8+ years of experience
 Work Experience:
 
