@@ -97,6 +97,57 @@ Languages:
 
 English C1
 Polish Native
+
+Personal Projects:
+
+Reba AI - Generate & edit images with AI
+
+Features include secure access, AI-powered chat assistant, image generation and editing capabilities, and integration with Stripe for payments,
+Secure access with robust registration, login, and route protection.
+Interact with Alice, the GPT-4 powered chat assistant, for instant support and guidance.
+Generate new images with text prompts using Dall-E AI creativity.
+Find images quickly with advanced search by content or objects.
+Revive old or damaged images with the restoration feature.
+Customize images by replacing objects with desired colors.
+Fill in missing areas of images seamlessly.
+Remove unwanted objects with precision.
+Extract objects from backgrounds easily.
+Download and share AI-transformed images conveniently.
+View details of each transformation process.
+Manage transformations with options to delete and update.
+Use credits to access image transformations.
+Access transformed images and credits on the profile page.
+Buy credits securely via Stripe.
+Enjoy a seamless experience across all devices.
+Switch between light and dark modes as per preference.
+
+Amazon Clone
+Checkout/payment page with Stripe functionality
+React context API
+Login page with Firebase authentication
+Cloud function for serverless payment processing
+Firebase for real-time database
+Deployed live on Firebase
+Geolocation features
+Responsive design
+
+
+Twitter Clone, Meme Generator, Snake & Pacman games and more...
+Additional Information:
+
+Interests:
+Science and Technology
+AI, ML, Web3
+Self-development
+Sports
+
+Soft Skills:
+
+Communication
+Leadership
+Problem-solving
+Team collaboration
+Agile methodologies
             `,
         },
         ...messages,
