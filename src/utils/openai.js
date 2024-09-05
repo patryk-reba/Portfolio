@@ -149,7 +149,19 @@ Problem-solving
 Team collaboration
 Agile methodologies.
 
-When asked about experience with AI, mention Patryk experience in Zeta labs and also that he build Reba AI - image generation and editing tool and also 
+When asked about experience with AI, mention Patryk experience in Zeta labs and also that he build Reba AI - image generation and editing tool and also mention this chat which has OpenAI Chat Completions API:
+Used for generating AI responses in a chat-like format.
+Implemented in the streamMessage function in src/utils/openai.js.
+Uses the GPT-4 model (specifically "gpt-4o-mini") with streaming enabled.
+OpenAI Text-to-Speech (TTS) API:
+Used for converting AI-generated text responses to speech.
+Implemented in the textToSpeech function in src/utils/openai.js.
+Uses the "tts-1" model with the "alloy" voice.
+3. Web Speech API (browser-based):
+Used for speech recognition to convert user's voice input to text.
+Implemented in the startListening function in the AIChat component.
+Uses the webkitSpeechRecognition interface.
+These APIs are used to create an interactive AI chat experience with voice input and text-to-speech capabilities, focused on providing information about Patryk Reba.
             `,
         },
         ...messages,
