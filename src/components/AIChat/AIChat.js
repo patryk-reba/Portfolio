@@ -11,6 +11,7 @@ import {
 import ChatHint from "./ChatHint";
 import { useLayoutEffect } from "react";
 import SuggestedQuestion from "./SuggestedQuestion"; // We'll create this component
+import ReactMarkdown from "react-markdown";
 
 function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
@@ -213,6 +214,27 @@ function AIChat() {
     handleSubmit(null, question);
   };
 
+  const renderMessage = (message, index) => {
+    return (
+      <div key={message.id || index} className={`message ${message.role}`}>
+        <ReactMarkdown>{message.content}</ReactMarkdown>
+        {message.role === "assistant" &&
+          !isStreaming &&
+          audioReady[message.id] && (
+            <button
+              className="speak-button"
+              onClick={() => speakMessage(message.content, message.id)}
+            >
+              <FontAwesomeIcon
+                icon={isSpeaking ? faVolumeMute : faVolumeUp}
+                style={{ color: isSpeaking ? "#8a2be2" : "#9370db" }}
+              />
+            </button>
+          )}
+      </div>
+    );
+  };
+
   return (
     <div className="ai-chat">
       <button className="chat-toggle" onClick={handleToggleChat}>
@@ -226,27 +248,7 @@ function AIChat() {
             ref={chatWindowRef}
             onScroll={handleScroll}
           >
-            {messages.map((message, index) => (
-              <div
-                key={message.id || index}
-                className={`message ${message.role}`}
-              >
-                {message.content}
-                {message.role === "assistant" &&
-                  !isStreaming &&
-                  audioReady[message.id] && (
-                    <button
-                      className="speak-button"
-                      onClick={() => speakMessage(message.content, message.id)}
-                    >
-                      <FontAwesomeIcon
-                        icon={isSpeaking ? faVolumeMute : faVolumeUp}
-                        style={{ color: isSpeaking ? "#8a2be2" : "#9370db" }} // Add this line
-                      />
-                    </button>
-                  )}
-              </div>
-            ))}
+            {messages.map((message, index) => renderMessage(message, index))}
             {isStreaming && <span className="streaming-indicator">✨</span>}
           </div>
 
