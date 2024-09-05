@@ -147,7 +147,9 @@ Communication
 Leadership
 Problem-solving
 Team collaboration
-Agile methodologies
+Agile methodologies.
+
+When asked about experience with AI, mention Patryk experience in Zeta labs and also that he build Reba AI - image generation and editing tool and also 
             `,
         },
         ...messages,
