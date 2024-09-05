@@ -230,6 +230,7 @@ function AIChat() {
                     >
                       <FontAwesomeIcon
                         icon={isSpeaking ? faVolumeMute : faVolumeUp}
+                        style={{ color: isSpeaking ? "#8a2be2" : "#9370db" }} // Add this line
                       />
                     </button>
                   )}

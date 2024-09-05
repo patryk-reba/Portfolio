@@ -81,6 +81,7 @@
   align-self: flex-end;
   margin-left: auto;
   text-align: right; /* Add this line to align text to the right */
+  width: max-content;
 }
 
 .assistant {
@@ -138,11 +139,11 @@ form button:hover {
   background: none;
   border: none;
   cursor: pointer;
-  color: #666;
+  color: #9370db; /* Changed to light purple for better visibility */
 }
 
 .speak-button:hover {
-  color: #333;
+  color: #8a2be2; /* Darker purple on hover */
 }
 
 .voice-input-button {
