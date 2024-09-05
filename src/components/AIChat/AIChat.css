@@ -46,7 +46,12 @@
   right: 0;
   width: 450px;
   height: 500px;
-  background-color: #282c34;
+  background-color: rgba(
+    40,
+    44,
+    52,
+    0.7
+  ); /* Changed to use rgba for transparency */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -87,7 +92,12 @@
 form {
   display: flex;
   padding: 15px;
-  background-color: #20232a;
+  background-color: rgba(
+    32,
+    35,
+    42,
+    0.7
+  ); /* Changed to use rgba for transparency */
   border-top: 1px solid #3a3f4b;
 }
 
