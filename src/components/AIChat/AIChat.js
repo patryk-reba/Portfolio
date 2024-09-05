@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { streamMessage } from "../../utils/openai";
 import "./AIChat.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
+import { faCommentDots, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 import ChatHint from "./ChatHint";
 
 function AIChat() {
@@ -29,6 +29,11 @@ function AIChat() {
       ]);
     }
   }, [isOpen]);
+
+  const speakMessage = (text) => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(utterance);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,6 +67,14 @@ function AIChat() {
             {messages.map((message, index) => (
               <div key={index} className={`message ${message.role}`}>
                 {message.content}
+                {message.role === "assistant" && (
+                  <button
+                    className="speak-button"
+                    onClick={() => speakMessage(message.content)}
+                  >
+                    <FontAwesomeIcon icon={faVolumeUp} />
+                  </button>
+                )}
               </div>
             ))}
             <div ref={messagesEndRef} />

@@ -44,6 +44,7 @@
 }
 
 .message {
+  position: relative;
   margin-bottom: 15px;
   padding: 10px 15px;
   border-radius: 18px;
@@ -100,4 +101,21 @@ form button {
 
 form button:hover {
   background-color: #9932cc; /* Lighter purple on hover */
+}
+
+.speak-button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.speak-button:hover {
+  opacity: 1;
 }
