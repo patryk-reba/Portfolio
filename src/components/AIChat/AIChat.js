@@ -3,11 +3,13 @@ import { streamMessage } from "../../utils/openai";
 import "./AIChat.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
+import ChatHint from "./ChatHint";
 
 function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [showHint, setShowHint] = useState(true);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -41,11 +43,19 @@ function AIChat() {
     setMessages([...messages, userMessage, assistantMessage]);
   };
 
+  const handleToggleChat = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      setShowHint(false);
+    }
+  };
+
   return (
     <div className="ai-chat">
-      <button className="chat-toggle" onClick={() => setIsOpen(!isOpen)}>
+      <button className="chat-toggle" onClick={handleToggleChat}>
         <FontAwesomeIcon icon={faCommentDots} />
       </button>
+      {showHint && !isOpen && <ChatHint />}
       {isOpen && (
         <div className="chat-window">
           <div className="chat-messages">
