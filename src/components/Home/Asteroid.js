@@ -1,12 +1,25 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Asteroid.css";
 
-function Asteroid({ angle, onExplode }) {
+function Asteroid({ angle, onExplode, initialSize }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [isExploding, setIsExploding] = useState(false);
+  const [size, setSize] = useState(initialSize);
 
   const asteroidRef = useRef(null);
+
+  useEffect(() => {
+    const updateSize = () => {
+      const minSize = Math.min(window.innerWidth, window.innerHeight);
+      setSize(initialSize * (minSize / 1000)); // Adjust size based on screen size
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+
+    return () => window.removeEventListener("resize", updateSize);
+  }, [initialSize]);
 
   useEffect(() => {
     const windowDiagonal = Math.sqrt(
@@ -40,12 +53,12 @@ function Asteroid({ angle, onExplode }) {
       const particles = document.querySelectorAll(".particle, .flame");
       particles.forEach((particle) => {
         const angle = Math.random() * Math.PI * 2;
-        const distance = 25 + Math.random() * 50;
+        const distance = size * (0.5 + Math.random() * 0.5);
         particle.style.setProperty("--x", `${Math.cos(angle) * distance}px`);
         particle.style.setProperty("--y", `${Math.sin(angle) * distance}px`);
       });
     }
-  }, [isExploding]);
+  }, [isExploding, size]);
 
   const handleClick = () => {
     setIsExploding(true);
@@ -76,6 +89,8 @@ function Asteroid({ angle, onExplode }) {
       className={`asteroid-wrapper ${isExploding ? "exploding" : ""}`}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
+        width: `${size}px`,
+        height: `${size}px`,
       }}
       onClick={handleClick}
     >
@@ -96,18 +111,39 @@ function Asteroid({ angle, onExplode }) {
 
 function Rocket() {
   const [launch, setLaunch] = useState(false);
+  const [showSpeechBubble, setShowSpeechBubble] = useState(false);
 
   useEffect(() => {
     const launchTimer = setTimeout(() => {
       setLaunch(true);
-    }, 5000); // Changed from 10000 to 5000 (5 seconds)
+    }, 5000);
 
-    return () => clearTimeout(launchTimer);
+    const speechBubbleTimer = setTimeout(() => {
+      setShowSpeechBubble(true);
+    }, 6000); // Show speech bubble 1 second after launch
+
+    const hideSpeechBubbleTimer = setTimeout(() => {
+      setShowSpeechBubble(false);
+    }, 11000); // Hide speech bubble after 5 seconds
+
+    return () => {
+      clearTimeout(launchTimer);
+      clearTimeout(speechBubbleTimer);
+      clearTimeout(hideSpeechBubbleTimer);
+    };
   }, []);
 
   return (
-    <div className="rocket" style={{ bottom: launch ? "110%" : "-100px" }}>
-      🚀
+    <div
+      className="rocket-container"
+      style={{ bottom: launch ? "110%" : "-100px" }}
+    >
+      <div className="rocket">🚀</div>
+      {showSpeechBubble && (
+        <div className="speech-bubble">
+          Help me! Destroy asteroids by clicking on them!
+        </div>
+      )}
     </div>
   );
 }
@@ -117,16 +153,18 @@ function AsteroidField() {
 
   useEffect(() => {
     const createAsteroid = () => {
-      const delay = Math.floor(Math.random() * (5000 - 2000 + 1) + 2000); // Changed from 5-10 seconds to 2-5 seconds
-      const angle = Math.random() * Math.PI * 2; // Random angle in radians
-      setAsteroids((prev) => [...prev, { id: Date.now(), angle }]);
+      const delay = Math.floor(Math.random() * (5000 - 2000 + 1) + 2000);
+      const angle = Math.random() * Math.PI * 2;
+      const baseSize = 80; // Base size from the original implementation
+      const sizeMultiplier = 1 + Math.random(); // Random multiplier between 1 and 2
+      const initialSize = baseSize * sizeMultiplier;
+
+      setAsteroids((prev) => [...prev, { id: Date.now(), angle, initialSize }]);
       setTimeout(createAsteroid, delay);
     };
 
-    // Start creating asteroids immediately
     createAsteroid();
 
-    // Clean up old asteroids
     const cleanupInterval = setInterval(() => {
       setAsteroids((prev) =>
         prev.filter((asteroid) => Date.now() - asteroid.id < 16000)
@@ -146,6 +184,7 @@ function AsteroidField() {
         <Asteroid
           key={asteroid.id}
           angle={asteroid.angle}
+          initialSize={asteroid.initialSize}
           onExplode={() => handleExplode(asteroid.id)}
         />
       ))}
