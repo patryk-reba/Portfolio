@@ -8,6 +8,8 @@ import cv2 from "../../Assets/../Assets/cv2.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import earthImage from "../../Assets/earth.png"; // Make sure to import the Earth image
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
@@ -25,6 +27,17 @@ function ResumeNew() {
     <div>
       <Container fluid className="resume-section">
         <Particle />
+
+        {/* Update the flying Earth animation delay */}
+        <div className="flying-earth-container">
+          <img
+            src={earthImage}
+            alt="Flying Earth"
+            className="flying-earth"
+            style={{ animationDelay: "3s" }} // Changed from '4s' to '3s'
+          />
+        </div>
+
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
