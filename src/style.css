@@ -938,3 +938,64 @@ button:focus {
 .img-fluid {
   user-select: none;
 }
+
+.image-container {
+  position: relative;
+  z-index: 10;
+}
+
+.message-cloud {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 110px); /* Move 110px to the right */
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px 25px 20px 35px; /* Adjust left padding */
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  width: 300px;
+  z-index: 20;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.message-cloud::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent;
+}
+
+@media (max-width: 768px) {
+  .message-cloud {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    width: 80%;
+    font-size: 1em;
+    padding: 20px 25px; /* Reset padding for mobile */
+  }
+
+  .message-cloud::before {
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+.asteroid {
+  cursor: pointer;
+}
+
+.asteroid:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}

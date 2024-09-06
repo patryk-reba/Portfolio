@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Asteroid.css";
 
-function Asteroid({ angle, onExplode, initialSize }) {
+function Asteroid({ angle, onExplode, initialSize, onAsteroidClick }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [isExploding, setIsExploding] = useState(false);
@@ -65,6 +65,7 @@ function Asteroid({ angle, onExplode, initialSize }) {
     setTimeout(() => {
       setIsVisible(false);
       onExplode();
+      onAsteroidClick(); // Call the passed click handler
     }, 1000);
   };
 
@@ -152,7 +153,7 @@ function Rocket() {
   );
 }
 
-function AsteroidField() {
+function AsteroidField({ onAsteroidClick }) {
   const [asteroids, setAsteroids] = useState([]);
 
   useEffect(() => {
@@ -180,6 +181,7 @@ function AsteroidField() {
 
   const handleExplode = (id) => {
     setAsteroids((prev) => prev.filter((asteroid) => asteroid.id !== id));
+    // Remove this line: onAsteroidClick();
   };
 
   return (
@@ -190,6 +192,7 @@ function AsteroidField() {
           angle={asteroid.angle}
           initialSize={asteroid.initialSize}
           onExplode={() => handleExplode(asteroid.id)}
+          onAsteroidClick={onAsteroidClick}
         />
       ))}
       <Rocket />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/me-new.png";
 import Tilt from "react-parallax-tilt";
@@ -11,6 +11,15 @@ import AsteroidField from "./Asteroid";
 import earthImage from "../../Assets/earth.png"; // Make sure to add this image to your Assets folder
 
 function Home() {
+  const [destroyedAsteroids, setDestroyedAsteroids] = useState(0);
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleAsteroidClick = useCallback(() => {
+    setDestroyedAsteroids((prev) => prev + 1);
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000); // Hide message after 3 seconds
+  }, []);
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -34,20 +43,25 @@ function Home() {
               </div>
             </Col>
             <Col md={5} style={{ paddingBottom: 0 }}>
-              {/* <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />d */}
-              <Tilt>
-                <img
-                  src={myImg}
-                  className="img-fluid"
-                  alt="avatar"
-                  style={{ borderRadius: "30%", maxHeight: "450px" }}
-                />
-              </Tilt>
+              <div className="image-container">
+                <Tilt>
+                  <img
+                    src={myImg}
+                    className="img-fluid"
+                    alt="avatar"
+                    style={{ borderRadius: "30%", maxHeight: "450px" }}
+                  />
+                </Tilt>
+                {showMessage && (
+                  <div className="message-cloud">
+                    Congratulations!
+                    <br />
+                    You've destroyed <strong>{destroyedAsteroids}</strong>{" "}
+                    asteroid
+                    {destroyedAsteroids !== 1 ? "s" : ""}!
+                  </div>
+                )}
+              </div>
             </Col>
             <HashLink to="#home2">
               <div className="arrowContainer">
@@ -57,7 +71,7 @@ function Home() {
           </Row>
         </Container>
         <Home2 />
-        <AsteroidField />
+        <AsteroidField onAsteroidClick={handleAsteroidClick} />
       </Container>
     </section>
   );
