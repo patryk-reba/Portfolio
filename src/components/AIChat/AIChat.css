@@ -139,19 +139,35 @@ form button:hover {
   background: none;
   border: none;
   cursor: pointer;
-  color: #9370db; /* Changed to light purple for better visibility */
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 
-.speak-button:hover {
-  color: #8a2be2; /* Darker purple on hover */
+.speak-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.voice-input-button {
-  margin-right: 10px; /* Adjust this value to increase or decrease the gap */
+.speak-button.ready {
+  color: #9370db;
 }
 
-.chat-input {
-  flex-grow: 1;
+.speak-button.ready:hover {
+  color: #8a2be2;
+}
+
+.speak-button.glowing {
+  animation: speakerGlow 2s ease-in-out;
+}
+
+@keyframes speakerGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px rgba(255, 0, 255, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1));
+  }
 }
 
 @keyframes glowing {
@@ -254,4 +270,12 @@ form button:hover {
 
 .speak-button:hover {
   color: #333;
+}
+
+.voice-input-button {
+  margin-right: 10px; /* Adjust this value to increase or decrease the gap */
+}
+
+.chat-input {
+  flex-grow: 1;
 }

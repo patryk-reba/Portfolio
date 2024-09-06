@@ -35,6 +35,7 @@ function AIChat() {
     "What languages does Patryk speak?",
     "What is Patryk's notice period?",
   ]);
+  const [speakerGlowing, setSpeakerGlowing] = useState({});
 
   const scrollToBottom = () => {
     if (chatWindowRef.current) {
@@ -54,13 +55,14 @@ function AIChat() {
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      setMessages([
-        {
-          role: "assistant",
-          content:
-            "Hi! I'm here to tell you about Patryk Reba. Ask me anything about his experience, skills, or projects!",
-        },
-      ]);
+      const initialMessage = {
+        role: "assistant",
+        content:
+          "Hi! I'm here to tell you about Patryk Reba. Ask me anything about his experience, skills, or projects!",
+        id: Date.now().toString(),
+      };
+      setMessages([initialMessage]);
+      generateAudio(initialMessage.content, initialMessage.id);
     }
   }, [isOpen]);
 
@@ -81,6 +83,12 @@ function AIChat() {
       const url = await textToSpeech(text);
       setAudioCache((prev) => ({ ...prev, [messageId]: url }));
       setAudioReady((prev) => ({ ...prev, [messageId]: true }));
+
+      // Add glowing effect when audio is ready
+      setSpeakerGlowing((prev) => ({ ...prev, [messageId]: true }));
+      setTimeout(() => {
+        setSpeakerGlowing((prev) => ({ ...prev, [messageId]: false }));
+      }, 3000); // Glow for 3 seconds
     } catch (error) {
       console.error("Error in text-to-speech:", error);
       setAudioReady((prev) => ({ ...prev, [messageId]: false }));
@@ -218,19 +226,29 @@ function AIChat() {
     return (
       <div key={message.id || index} className={`message ${message.role}`}>
         <ReactMarkdown>{message.content}</ReactMarkdown>
-        {message.role === "assistant" &&
-          !isStreaming &&
-          audioReady[message.id] && (
-            <button
-              className="speak-button"
-              onClick={() => speakMessage(message.content, message.id)}
-            >
-              <FontAwesomeIcon
-                icon={isSpeaking ? faVolumeMute : faVolumeUp}
-                style={{ color: isSpeaking ? "#8a2be2" : "#9370db" }}
-              />
-            </button>
-          )}
+        {message.role === "assistant" && (
+          <button
+            className={`speak-button ${
+              audioReady[message.id] ? "ready" : "disabled"
+            } ${speakerGlowing[message.id] ? "glowing" : ""}`}
+            onClick={() =>
+              audioReady[message.id] &&
+              speakMessage(message.content, message.id)
+            }
+            disabled={!audioReady[message.id]}
+          >
+            <FontAwesomeIcon
+              icon={isSpeaking ? faVolumeMute : faVolumeUp}
+              style={{
+                color: audioReady[message.id]
+                  ? isSpeaking
+                    ? "#8a2be2"
+                    : "#9370db"
+                  : "#666",
+              }}
+            />
+          </button>
+        )}
       </div>
     );
   };
