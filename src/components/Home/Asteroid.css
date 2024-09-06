@@ -48,6 +48,8 @@
 .rocket {
   font-size: 60px;
   transform: rotate(-45deg);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .rocket-container {
@@ -55,6 +57,8 @@
   transition: bottom 20s ease-out;
   z-index: 10;
   left: 10px; /* Add this line to position the rocket 10px from the left edge */
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .speech-bubble-container {
