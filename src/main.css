@@ -1,0 +1,113 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(45deg, #1a1a2e, #16213e);
+  color: white;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.earth-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Assets/earth.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -2;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Style for AIChat component */
+.ai-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Flying asteroids */
+@keyframes fly {
+  0% {
+    transform: translateX(200%) translateY(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-200%) translateY(100%) rotate(360deg);
+  }
+}
+
+.asteroid {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.asteroid:nth-child(1) {
+  animation: fly 25s linear infinite;
+}
+.asteroid:nth-child(2) {
+  animation: fly 30s linear infinite 2s;
+}
+.asteroid:nth-child(3) {
+  animation: fly 28s linear infinite 5s;
+}
+.asteroid:nth-child(4) {
+  animation: fly 35s linear infinite 1s;
+}
+.asteroid:nth-child(5) {
+  animation: fly 32s linear infinite 3s;
+}
+
+/* Parallax effect */
+.parallax {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}

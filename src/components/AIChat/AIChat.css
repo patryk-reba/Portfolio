@@ -57,6 +57,7 @@
   flex-direction: column;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  animation: chatWindowGlow 3s linear infinite; /* Add this line */
 }
 
 .chat-messages {
@@ -186,19 +187,13 @@ form button:hover {
 }
 
 @keyframes chatWindowGlow {
-  0% {
-    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
   }
   50% {
-    box-shadow: 0 5px 30px rgba(138, 43, 226, 0.7);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
   }
-  100% {
-    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
-  }
-}
-
-.chat-window-glow {
-  animation: chatWindowGlow 2s ease-in-out;
 }
 
 /* Modify the existing media query at the end of the file */
