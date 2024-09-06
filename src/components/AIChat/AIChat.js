@@ -29,12 +29,24 @@ function AIChat() {
   const shouldScrollRef = useRef(true);
   const audioRef = useRef(new Audio());
   const [isGlowing, setIsGlowing] = useState(false);
-  const [suggestedQuestions, setSuggestedQuestions] = useState([
+  const [allSuggestedQuestions, setAllSuggestedQuestions] = useState([
     "What is Patryk's experience with AI?",
     "How many years of experience does Patryk have?",
-    "What languages does Patryk speak?",
     "What is Patryk's notice period?",
+    "What are Patryk's main areas of expertise?",
+    "Has Patryk worked on any notable projects?",
+    "Does Patryk have experience with cloud platforms?",
+    "What are Patryk's soft skills?",
+    "Has Patryk worked in Agile environments?",
+    "What languages does Patryk speak?",
+    "What is Patryk's educational background?",
+    "What programming languages does Patryk know?",
+    "What is Patryk's approach to problem-solving?",
   ]);
+  const [currentSuggestedQuestions, setCurrentSuggestedQuestions] = useState(
+    []
+  );
+  const [askedQuestions, setAskedQuestions] = useState([]);
   const [speakerGlowing, setSpeakerGlowing] = useState({});
 
   const scrollToBottom = () => {
@@ -77,6 +89,16 @@ function AIChat() {
       window.speechSynthesis.onvoiceschanged = loadVoices;
     }
   }, []);
+
+  useEffect(() => {
+    // Initialize the first 4 suggested questions
+    if (
+      currentSuggestedQuestions.length === 0 &&
+      allSuggestedQuestions.length > 0
+    ) {
+      setCurrentSuggestedQuestions(allSuggestedQuestions.slice(0, 4));
+    }
+  }, [allSuggestedQuestions]);
 
   const generateAudio = async (text, messageId) => {
     try {
@@ -154,6 +176,11 @@ function AIChat() {
     const messageContent = voiceInput || input;
     if (!messageContent.trim()) return;
 
+    // If the submitted message is not from suggested questions, add it to askedQuestions
+    if (!currentSuggestedQuestions.includes(messageContent)) {
+      setAskedQuestions([...askedQuestions, messageContent]);
+    }
+
     const userMessage = { role: "user", content: messageContent };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
@@ -219,7 +246,26 @@ function AIChat() {
   };
 
   const handleSuggestedQuestionClick = (question) => {
+    setAskedQuestions([...askedQuestions, question]);
     handleSubmit(null, question);
+
+    // Replace the asked question with a new one, but limit to one new suggestion after initial set
+    setCurrentSuggestedQuestions((prevQuestions) => {
+      const newQuestions = prevQuestions.filter((q) => q !== question);
+      if (newQuestions.length < 1) {
+        // This ensures we always have at least one suggestion
+        const remainingQuestions = allSuggestedQuestions.filter(
+          (q) =>
+            !askedQuestions.includes(q) &&
+            !newQuestions.includes(q) &&
+            q !== question
+        );
+        if (remainingQuestions.length > 0) {
+          newQuestions.push(remainingQuestions[0]);
+        }
+      }
+      return newQuestions;
+    });
   };
 
   const renderMessage = (message, index) => {
@@ -253,6 +299,23 @@ function AIChat() {
     );
   };
 
+  const renderSuggestedQuestions = () => {
+    if (currentSuggestedQuestions.length === 0) return null;
+
+    return (
+      <div className="suggested-questions">
+        {/* <p>Suggested questions:</p> */}
+        {currentSuggestedQuestions.map((question, index) => (
+          <SuggestedQuestion
+            key={index}
+            question={question}
+            onClick={() => handleSuggestedQuestionClick(question)}
+          />
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="ai-chat">
       <button className="chat-toggle" onClick={handleToggleChat}>
@@ -270,19 +333,7 @@ function AIChat() {
             {isStreaming && <span className="streaming-indicator">✨</span>}
           </div>
 
-          {/* Add suggested questions at the bottom */}
-          {messages.length === 1 && (
-            <div className="suggested-questions">
-              <p>Suggested questions:</p>
-              {suggestedQuestions.map((question, index) => (
-                <SuggestedQuestion
-                  key={index}
-                  question={question}
-                  onClick={() => handleSuggestedQuestionClick(question)}
-                />
-              ))}
-            </div>
-          )}
+          {renderSuggestedQuestions()}
 
           <form
             onSubmit={(e) => handleSubmit(e, null, false)}

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 1rem;
+  margin-top: 5px;
   margin-left: 1rem; /* Add left margin */
 }
 
@@ -11,7 +11,7 @@
   border: none;
   border-radius: 18px;
   padding: 8px 16px;
-  margin: 4px 4px 4px 0; /* Adjust margin */
+  margin: 0px 4px 4px 4px; /* Adjust margin */
   font-size: 14px;
   color: #ffffff; /* Change text color for better contrast */
   cursor: pointer;
