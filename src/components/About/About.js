@@ -15,15 +15,16 @@ function About() {
       <div className="flying-earth-container">
         <img src={earthImage} alt="Flying Earth" className="flying-earth" />
       </div>
-      <iframe
-        width="550vw"
-        height="300vh"
-        src="https://www.youtube.com/embed/Et1DElvCDE0?si=AYndRNTtMbJdIl8y"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        style={{ zIndex: "1000" }}
-        allowFullScreen
-      ></iframe>
+      <div style={{ position: "relative", zIndex: 1001 }}>
+        <iframe
+          width="550"
+          height="300"
+          src="https://www.youtube.com/embed/Et1DElvCDE0?si=AYndRNTtMbJdIl8y"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
       <Container>
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
