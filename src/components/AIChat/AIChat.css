@@ -57,7 +57,7 @@
   flex-direction: column;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  animation: chatWindowGlow 3s linear infinite; /* Add this line */
+  animation: chatWindowGlow 5s ease-in-out forwards;
 }
 
 .chat-messages {
@@ -187,12 +187,36 @@ form button:hover {
 }
 
 @keyframes chatWindowGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+  }
+  25% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 255, 1);
+  }
+  75% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.7); /* More intense purple glow */
+  }
+}
+
+@keyframes initialChatWindowGlow {
   0%,
   100% {
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
   }
   50% {
     box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+  }
+}
+
+@keyframes subtlePurpleGlow {
+  to {
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5); /* Less intense purple glow */
   }
 }
 
