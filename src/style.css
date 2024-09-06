@@ -951,7 +951,7 @@ button:focus {
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.9);
   color: #333;
-  padding: 20px 25px 20px 35px; /* Adjust left padding */
+  padding: 20px 10px 20px 10px; /* Adjust left padding */
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 80%;
@@ -960,6 +960,7 @@ button:focus {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.4;
+  opacity: 0.8;
 }
 
 .message-cloud::before {
