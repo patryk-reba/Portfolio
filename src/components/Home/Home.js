@@ -8,6 +8,7 @@ import Type from "./Type";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { HashLink } from "react-router-hash-link";
 import AsteroidField from "./Asteroid";
+import earthImage from "../../Assets/earth.png"; // Make sure to add this image to your Assets folder
 
 function Home() {
   return (

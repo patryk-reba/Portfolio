@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import earthImage from "../../Assets/earth.png"; // Make sure this path is correct
 
 import instEco from "../../Assets/Projects/instEco.png";
 import tenzies from "../../Assets/Projects/tenzies.png";
@@ -25,6 +26,9 @@ function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
+      <div className="flying-earth-container">
+        <img src={earthImage} alt="Flying Earth" className="flying-earth" />
+      </div>
       <Container>
         {" "}
         <h1 className="project-heading">
@@ -297,7 +301,7 @@ function Projects() {
                   <p>
                     HP TechPulse is a cloud-based telemetry and analytics
                     platform that aggregates critical data from devices and
-                    applications, putting deep insights at IT’s fingertips to
+                    applications, putting deep insights at IT's fingertips to
                     predict and resolve device issues before they impact
                     employees.
                   </p>

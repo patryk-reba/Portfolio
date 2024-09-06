@@ -6,10 +6,15 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import pwrLogo from "../../Assets/pwr-logo.jpg";
 import Education from "./Education";
+import earthImage from "../../Assets/earth.png"; // Import the Earth image
 
 function About() {
   return (
     <Container fluid className="about-section">
+      <Particle />
+      <div className="flying-earth-container">
+        <img src={earthImage} alt="Flying Earth" className="flying-earth" />
+      </div>
       <iframe
         width="550vw"
         height="300vh"
@@ -19,7 +24,6 @@ function About() {
         style={{ zIndex: "1000" }}
         allowFullScreen
       ></iframe>
-      <Particle />
       <Container>
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
