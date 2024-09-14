@@ -6,7 +6,8 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import pwrLogo from "../../Assets/pwr-logo.jpg";
 import Education from "./Education";
-import earthImage from "../../Assets/earth.png"; // Import the Earth image
+import earthImage from "../../Assets/earth.png";
+import podcastAudio from "../../Assets/podcast.wav"; // Add this import back
 
 function About() {
   return (
@@ -26,6 +27,40 @@ function About() {
         ></iframe>
       </div>
       <Container>
+        <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Col
+            md={7}
+            style={{
+              justifyContent: "center",
+              paddingTop: "30px",
+              paddingBottom: "50px",
+            }}
+          >
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+              Know Who <strong className="purple">I'M</strong>
+            </h1>
+            <Aboutcard />
+          </Col>
+          <Col
+            md={5}
+            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            className="about-img"
+          >
+            <img src={laptopImg} alt="about" className="img-fluid" />
+          </Col>
+        </Row>
+
+        {/* Add the podcast section back here */}
+        <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Col md={8} style={{ paddingBottom: "50px" }}>
+            <h2 className="project-heading">Podcast about Patryk's resume</h2>
+            <audio controls style={{ width: "100%", marginTop: "20px" }}>
+              <source src={podcastAudio} type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </Col>
+        </Row>
+
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
