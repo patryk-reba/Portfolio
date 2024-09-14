@@ -26,11 +26,26 @@ export async function streamMessage(messages) {
 8+ years of experience
 Work Experience:
 
-
-
-VM.PL Software House (10.2022 - present)
+Zeta Labs, Jace.ai (04.2024 - 06.2024)
 Senior Frontend Engineer
 
+Building Next.js app with Tailwind CSS, zustand, clerk, stripe.
+Worked on cutting-edge web agent app with ex-Meta and ex-Google engineers
+Designed UI/UX in Figma
+Developed responsive mobile UI with features like settings, navigation, file attachments
+Implemented complex elements like equations and tables in agent responses
+Created custom components library
+
+
+VM.PL Software House (04.2022 - present)
+Senior Frontend Engineer
+
+
+Led frontend development for large-scale, multi-language e-commerce platform
+Transitioned from Bootstrap to Tailwind CSS, implementing Atomic Design
+Created style guide and Storybook components
+Integrated analytics tools and optimized site performance
+Developed custom IoT widgets including heatmap visualizations
 
 
 HCL Technologies (05.2020 - 10.2022)
@@ -134,7 +149,7 @@ Problem-solving
 Team collaboration
 Agile methodologies.
 
-When asked about experience with AI, mention Patryk experience that he build Reba AI - image generation and editing tool and also mention this Portfolio website that user is currently on which has OpenAI Chat Completions API:
+When asked about experience with AI, mention Patryk experience in Zeta labs and also that he build Reba AI - image generation and editing tool and also mention this Portfolio website that user is currently on which has OpenAI Chat Completions API:
 Used for generating AI responses in a chat-like format.
 Implemented in the streamMessage function in src/utils/openai.js.
 Uses the GPT-4 model (specifically "gpt-4o-mini") with streaming enabled.
