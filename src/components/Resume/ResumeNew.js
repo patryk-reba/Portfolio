@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/patryk_reba.pdf";
@@ -18,25 +18,36 @@ const resumeLink =
 // zamiast tego pdf dam tu po prostu JPG
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [audioSrc, setAudioSrc] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
+
+    // Load audio file
+    import("../../Assets/podcast.wav").then((audio) => {
+      setAudioSrc(audio.default);
+    });
   }, []);
 
   return (
-    <div>
-      <Container fluid className="resume-section">
-        <Particle />
-
-        {/* Update the flying Earth animation delay */}
-        <div className="flying-earth-container">
-          <img
-            src={earthImage}
-            alt="Flying Earth"
-            className="flying-earth"
-            style={{ animationDelay: "3s" }} // Changed from '4s' to '3s'
-          />
-        </div>
+    <Container fluid className="resume-section">
+      <Particle />
+      <Container>
+        {/* Add the podcast section here */}
+        <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Col md={8} style={{ paddingBottom: "50px" }}>
+            <h2 className="project-heading">
+              {" "}
+              <b className="purple">PODCAST</b> about my resume
+            </h2>
+            {audioSrc && (
+              <audio controls style={{ width: "100%", marginTop: "20px" }}>
+                <source src={audioSrc} type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            )}
+          </Col>
+        </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
@@ -86,7 +97,7 @@ function ResumeNew() {
           </Button>
         </Row>
       </Container>
-    </div>
+    </Container>
   );
 }
 

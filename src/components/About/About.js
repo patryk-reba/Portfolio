@@ -50,17 +50,6 @@ function About() {
           </Col>
         </Row>
 
-        {/* Add the podcast section back here */}
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col md={8} style={{ paddingBottom: "50px" }}>
-            <h2 className="project-heading">Podcast about Patryk's resume</h2>
-            <audio controls style={{ width: "100%", marginTop: "20px" }}>
-              <source src={podcastAudio} type="audio/wav" />
-              Your browser does not support the audio element.
-            </audio>
-          </Col>
-        </Row>
-
         <h1 className="project-heading">
           Professional <strong className="purple">Skillset </strong>
         </h1>
