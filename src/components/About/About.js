@@ -16,17 +16,23 @@ function About() {
       <div className="flying-earth-container">
         <img src={earthImage} alt="Flying Earth" className="flying-earth" />
       </div>
-      <div style={{ position: "relative", zIndex: 1001 }}>
-        <iframe
-          width="550"
-          height="300"
-          src="https://www.youtube.com/embed/Et1DElvCDE0?si=AYndRNTtMbJdIl8y"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
       <Container>
+        {/* Updated video container */}
+        <Row className="justify-content-center mb-5">
+          <Col md={8} lg={6} className="video-wrapper">
+            <div className="video-responsive">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Et1DElvCDE0?si=AYndRNTtMbJdIl8y"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </Col>
+        </Row>
+
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
             md={7}
