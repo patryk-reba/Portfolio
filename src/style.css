@@ -1114,3 +1114,72 @@ audio::-webkit-media-controls-seek-forward-button {
     max-width: 100%;
   }
 }
+
+/* Mobile AI Chat Section Styles */
+.mobile-ai-chat-section {
+  background-color: #1b1a2ea9;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-ai-chat-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-ai-chat-image img {
+  max-width: 100%;
+  max-height: 900px; /* Adjust this value as needed */
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-ai-chat-description {
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-ai-chat-description h3 {
+  font-size: 2.2em;
+  font-weight: 500;
+  padding-top: 10px;
+  color: #cd5ff8;
+}
+
+.feature-heading {
+  font-size: 1.5em;
+  color: #cd5ff8;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.project-features {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.project-features li {
+  margin-bottom: 8px;
+}
+
+.project-conclusion {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-top: 20px;
+}

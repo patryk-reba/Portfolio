@@ -21,6 +21,7 @@ import techpulse from "../../Assets/Projects/techpulse.png";
 import voith from "../../Assets/Projects/voith.webp";
 import dashboard from "../../Assets/Projects/nextjs-dashboard.png";
 import ai2 from "../../Assets/Projects/ai2.png";
+import mobile from "../../Assets/Projects/mobile.png"; // Add this import
 
 function Projects() {
   return (
@@ -34,9 +35,7 @@ function Projects() {
         <h1 className="project-heading">
           My <strong className="purple ">PORTFOLIO </strong>
         </h1>
-        {/* <h2 className="project-category">
-          <strong className="purple">Current Job</strong>
-        </h2> */}
+        {/* Existing project cards */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -382,6 +381,61 @@ function Projects() {
               />
             </Col>
           </Row>
+        </Row>
+        {/* Mobile AI chat section moved to the bottom */}
+        <h2 className="project-heading">
+          <strong className="purple">MOBILE</strong>
+        </h2>
+        <Row className="mobile-ai-chat-section">
+          <Col md={5} className="mobile-ai-chat-image">
+            <img
+              src={mobile}
+              alt="Mobile AI Chat"
+              className="img-fluid rounded"
+            />
+          </Col>
+          <Col md={7} className="mobile-ai-chat-description">
+            <h3 className="project-heading">Mobile AI Chat</h3>
+            <p className="project-description">
+              An advanced mobile AI chat application leveraging OpenAI's
+              cutting-edge technologies:
+            </p>
+            <h4 className="feature-heading">Key features:</h4>
+            <ul className="project-features">
+              <li>Intelligent conversations powered by GPT-4</li>
+              <li>Image generation using DALL-E</li>
+              <li>Real-time chat with context-aware responses</li>
+              <li>Dark/light theme toggle for comfortable viewing</li>
+              <li>Chat history management and persistence</li>
+            </ul>
+            <h4 className="feature-heading">AI Integration:</h4>
+            <ul className="project-features">
+              <li>
+                OpenAI's GPT-4 API for natural language processing and
+                generation
+              </li>
+              <li>
+                DALL-E API for creating unique images based on text prompts
+              </li>
+              <li>Custom prompt engineering for optimized AI responses</li>
+              <li>
+                Seamless integration of text and image generation capabilities
+              </li>
+            </ul>
+            <h4 className="feature-heading">Technologies used:</h4>
+            <ul className="project-features">
+              <li>React Native for cross-platform mobile development</li>
+              <li>TypeScript for enhanced code reliability</li>
+              <li>AsyncStorage for local data persistence</li>
+              <li>Custom API integration for OpenAI services</li>
+              <li>React Native's Animated API for smooth UI transitions</li>
+            </ul>
+            <p className="project-conclusion">
+              This app showcases the power of combining React Native with
+              state-of-the-art AI technologies, offering users an immersive and
+              intelligent mobile chat experience.
+            </p>
+          </Col>
         </Row>
       </Container>
     </Container>
